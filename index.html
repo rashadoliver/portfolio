@@ -1349,6 +1349,31 @@ section.blk{padding:12px 0}
 }
 @media (max-width:480px){.fa-mods{grid-template-columns:1fr}}
 
+
+.rbt{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.rbtile{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;text-decoration:none;color:var(--ink);box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s;font-family:"Google Sans",Roboto,Arial,sans-serif}
+.rbtile:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(60,64,67,.18)}
+.rbt-h{display:flex;align-items:center;gap:2px;padding:10px 14px;font-size:15px;border-bottom:1px solid #eceff1;min-height:42px}
+.rbt-art{height:118px;display:flex;align-items:center;justify-content:center;gap:10px;background:#f8f9fa}
+.rbt-art img{height:70px;width:auto}
+.rbt-play{width:64px;height:46px;border-radius:12px;background:#d93025;color:#fff;font-size:22px;display:flex;align-items:center;justify-content:center}
+.rbt-tiers{flex-direction:column;gap:6px}.rbt-tiers i{font-style:normal;color:#fff;font-weight:700;font-size:12.5px;border-radius:6px;padding:4px 0;width:130px;text-align:center}
+.rbt-t{font-weight:700;font-size:15.5px;padding:12px 14px 2px}
+.rbt-s{font-size:13px;color:var(--muted);padding:0 14px;line-height:1.4;flex:1}
+.rbt-go{font-weight:700;font-size:13.5px;color:#1a73e8;padding:10px 14px 14px}
+@media (max-width:520px){.rbt{grid-template-columns:1fr}}
+/* village live window */
+.vwin{border-radius:16px;overflow:hidden;background:#fff;box-shadow:var(--shadow);border:1px solid #e4e0d2;display:flex;flex-direction:column}
+.vwin-bar{display:flex;align-items:center;gap:7px;padding:9px 12px;background:#f2f2e8;border-bottom:1px solid #e4e0d2}
+.vwin-bar i{width:11px;height:11px;border-radius:50%;display:block}
+.vwin-bar span{flex:1;margin-left:8px;background:#fff;border-radius:999px;padding:4px 12px;font-size:12.5px;color:#505678}
+.vwin-bar a{font-size:12.5px;font-weight:700;color:#cd684c;text-decoration:none;white-space:nowrap}
+.vwin-view{position:relative;flex:1;min-height:360px;overflow:hidden;background:#f9e5b8 url(img/deck/d07.jpg) center/cover}
+.vwin-view iframe{position:absolute;top:0;left:0;width:1280px;border:0;transform-origin:0 0;background:#fff}
+.vwin-hint{font-size:12px;color:#505678;padding:7px 12px;background:#f2f2e8;border-top:1px solid #e4e0d2}
+.vmore.v3{grid-template-columns:1fr 1fr 1fr!important;align-items:stretch}
+.vmore.v3>*{height:100%;margin-top:0!important}
+@media (max-width:820px){.vmore.v3{grid-template-columns:1fr!important}}
 </style>
 </head>
 <body>
@@ -1409,15 +1434,13 @@ section.blk{padding:12px 0}
   </div>
 
   <div class="pre" id="highlights">
-    <div class="head"><span class="pill b">Highlights most relevant to this role</span><span style="font-size:14px;color:var(--muted)">A 40-second reel. Tap a chapter to jump.</span></div>
+    <div class="head"><span class="pill b">Highlights most relevant to this role</span><span style="font-size:14px;color:var(--muted)">Tap a tile to try the rebuilt tools.</span></div>
     <div class="hlgrid" style="margin-top:16px">
-      <div>
-        <div class="reel"><video id="reel" controls muted playsinline preload="metadata" poster="img/poster_reel.jpg" aria-label="Highlight reel of RaShad's work samples"><source src="media/reel.mp4" type="video/mp4"></video></div>
-        <div class="chapters" id="chapters">
-          <button data-t="3"><i style="background:#4285F4"></i>01 Budget controls</button>
-          <button data-t="12.8"><i style="background:#EA4335"></i>02 Data &amp; reporting</button>
-          <button data-t="25.6"><i style="background:#0078d4"></i>03 Forecasting</button>
-        </div>
+      <div class="rbt">
+        <a class="rbtile" href="#genesis" data-team="2" data-rb="rbPiq"><div class="rbt-h" style="color:#1a73e8">Procure<span>I</span><b style="color:#1e8e3e;font-weight:400">Q</b></div><div class="rbt-art"><img src="img/rb/piq_core.png" alt=""><img src="img/rb/piq_tags.png" alt=""><img src="img/rb/piq_pie.png" alt=""></div><div class="rbt-t">ProcureIQ &amp; SpendView</div><div class="rbt-s">Google’s procurement “app store” and its spend dashboard</div><span class="rbt-go">Try it ›</span></a>
+        <a class="rbtile" href="#genesis" data-team="3" data-rb="rbAit"><div class="rbt-h" style="border-bottom:2px solid #d93025">AI Tube | <span style="color:#1a73e8">Finance</span></div><div class="rbt-art"><span class="rbt-play">▶</span></div><div class="rbt-t">AI Tube for Finance</div><div class="rbt-s">A YouTube-style library of AI demos, with a transcript chatbot</div><span class="rbt-go">Try it ›</span></a>
+        <a class="rbtile" href="#genesis" data-team="1" data-rb="rbFat"><div class="rbt-h" style="border-bottom:2px solid #d93025;justify-content:center"><img src="img/rb/gshield.png" alt="" style="height:20px"></div><div class="rbt-art"><img src="img/rb/fat1.png" alt="" style="height:96px"></div><div class="rbt-t">Final Approver Training</div><div class="rbt-s">The course I ran for Directors &amp; SVPs on spend approval</div><span class="rbt-go">Try it ›</span></a>
+        <a class="rbtile" href="#raf" data-rb="rbRaf"><div class="rbt-h">RAF tiering</div><div class="rbt-art rbt-tiers"><i style="background:#d93025">Tier 1</i><i style="background:#f29900">Tier 2</i><i style="background:#188038">Tier 3</i></div><div class="rbt-t">RAF tiering &amp; approval tool</div><div class="rbt-s">Pick a region and amount; see the tier and who signs off</div><span class="rbt-go">Try it ›</span></a>
       </div>
       <div class="hcards">
         <a class="hcard" href="#microsoft" style="border-left-color:#0078d4"><span class="n" style="color:#0078d4">700M</span><span><span class="t">Forecasting &amp; cohort analysis</span><br><span class="s">Microsoft · learned SQL to model lifetime value</span></span><span class="go" aria-hidden="true">›</span></a>
@@ -1491,7 +1514,7 @@ section.blk{padding:12px 0}
   </button>
   <div class="wbody" id="wb10"><div class="inner"><div class="wcontent">
     <div class="vhero">
-      <div class="ph"><img class="zoom" src="img/deck/d07.jpg" alt="The Village Group Mentorship Program"></div>
+      <div class="vwin"><div class="vwin-bar"><i style="background:#cd684c"></i><i style="background:#f9e5b8"></i><i style="background:#505678"></i><span>thevillagegmp.com</span><a href="https://thevillagegmp.com/" target="_blank" rel="noopener">Open ↗</a></div><div class="vwin-view" id="vwin"><iframe data-src="https://thevillagegmp.com/" title="The Village Group Mentorship Program website (live)" loading="lazy" tabindex="0"></iframe></div><div class="vwin-hint">Live site · scroll inside the window to explore</div></div>
       <div class="vroles">
         <div class="vrole now"><div class="when">Jun 2026 – Present</div><h4>Board of Advisors</h4><p>I advise on strategy, bookkeeping, mentor and mentee selection, and risk. I’m listed alongside advisors from Google, Spotify and Northwestern Mutual.</p></div>
         <div class="vrole"><div class="when">Dec 2024 – Jun 2026</div><h4>President</h4><p>I ran the program’s direction and operations through its biggest growth period, and was the <b>first to bring $10,000 in scholarships</b> into the organization, a huge influx for us.</p></div>
@@ -1505,7 +1528,7 @@ section.blk{padding:12px 0}
       <div class="vstat"><div class="n">1,500+</div><div class="x">Annual applications, an org record</div></div>
       <div class="vstat"><div class="n">2→13</div><div class="x">Admin team growth</div></div>
     </div>
-    <div class="vmore">
+    <div class="vmore v3">
       <div class="vcard"><h4>What I built as President</h4>
         <ul class="blist" style="color:#505678">
           <li><span>Directed operations for 250+ mentees and recruited the largest mentor cohort in Village history</span></li>
@@ -1513,8 +1536,7 @@ section.blk{padding:12px 0}
           <li><span>Grew applications to 1,500+ across three cohorts</span></li>
         </ul>
       </div>
-      <div class="vcol">
-        <div class="vcard"><h4>Partners I brought to the table</h4>
+      <div class="vcard"><h4>Partners I brought to the table</h4>
           <div class="vchips">
             <a href="https://www.instagram.com/laclippers/" target="_blank" rel="noopener">LA Clippers ↗</a>
             <a href="https://www.instagram.com/cryptocomarena/" target="_blank" rel="noopener">Crypto.com Arena ↗</a>
@@ -1523,8 +1545,7 @@ section.blk{padding:12px 0}
           </div>
           <p style="font-size:13.5px;margin-top:10px">Each partnership became a hands-on experience for mentees.</p>
         </div>
-        <div class="vquote">Rashad helped me understand my value and to not take no for an answer.<small><a href="https://www.linkedin.com/in/kevinaprea/" target="_blank" rel="noopener">Kevin Cabrera ↗</a>, Village mentee who went on to land offers from PwC, J.P. Morgan and Amazon (from thevillagegmp.com)</small></div>
-      </div>
+      <div class="vquote">Rashad helped me understand my value and to not take no for an answer.<small><a href="https://www.linkedin.com/in/kevinaprea/" target="_blank" rel="noopener">Kevin Cabrera ↗</a>, Village mentee who went on to land offers from PwC, J.P. Morgan and Amazon (from thevillagegmp.com)</small></div>
     </div>
   </div></div></div>
 </div></div></section>
@@ -2006,10 +2027,6 @@ section.blk{padding:12px 0}
   document.querySelectorAll('.frow[data-f],.ftab').forEach(function(r){r.addEventListener('click',function(){openFile(r.dataset.f)})});
   openFile('sql');
 
-  /* ---------- highlight reel chapters ---------- */
-  var reel=document.getElementById('reel'),chs=[].slice.call(document.querySelectorAll('#chapters button'));
-  chs.forEach(function(b){b.addEventListener('click',function(){reel.currentTime=+b.dataset.t;var p=reel.play();if(p&&p.catch)p.catch(function(){})})});
-  reel.addEventListener('timeupdate',function(){var t=reel.currentTime,cur=null;chs.forEach(function(b){if(t>=+b.dataset.t)cur=b});chs.forEach(function(b){b.classList.toggle('on',b===cur)})});
   /* ---------- personal message: fades in behind headshot on first visit ---------- */
   var av=document.getElementById('avatar'),avv=document.getElementById('avv'),mvd=document.getElementById('mv'),mvv=mvd.querySelector('video'),ctl=document.getElementById('msgctl'),bP=document.getElementById('mPlay'),bM=document.getElementById('mMute'),bB=document.getElementById('mBig');
   mvv.src='media/message.mp4';av.classList.add('has-msg');av.tabIndex=0;
@@ -2591,6 +2608,19 @@ function render(){
  if(S.v===6&&[0,1,2,3,4,5].every(k=>S.done.has(k))&&!S.done.has(6)){S.done.add(6)}
 }
 render();
+})();
+</script>
+<script>
+/* rebuild tiles + village live window */
+(function(){
+ document.querySelectorAll('.rbtile').forEach(function(a){a.addEventListener('click',function(){var id=a.dataset.rb;setTimeout(function(){var el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'})},450)})});
+ var v=document.getElementById('vwin');if(!v)return;var f=v.querySelector('iframe');
+ function fit(){var w=v.clientWidth||600,k=w/1280;f.style.transform='scale('+k+')';f.style.height=(v.clientHeight/k)+'px'}
+ function load(){if(!f.src){f.src=f.dataset.src}fit()}
+ window.addEventListener('resize',fit);
+ var w=v.closest('.world');
+ if('IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)load()})}).observe(v)}else load();
+ if(w)w.addEventListener('click',function(){setTimeout(load,400)});
 })();
 </script>
 </body>
