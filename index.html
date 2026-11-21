@@ -837,6 +837,168 @@ section.blk{padding:12px 0}
   .fmsg{right:12px;bottom:12px}
   nav .wrap{height:52px}
 }
+
+/* ===== interactive rebuilds ===== */
+.rb{margin-top:22px}
+.rb-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.rb-head b{font-size:16px}
+.rb-tag{font-size:11px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;border-radius:6px;padding:3px 8px;background:#e6f4ea;color:#137333}
+.rb-note{font-size:12.5px;color:var(--muted);margin-left:auto}
+.rb-win{border:1px solid #dadce0;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 8px 28px rgba(60,64,67,.14);font-family:"Google Sans Flex",Roboto,Arial,sans-serif;color:#202124}
+.rb-bar{height:34px;background:#f1f3f4;border-bottom:1px solid #dadce0;display:flex;align-items:center;gap:7px;padding:0 12px}
+.rb-bar i{width:11px;height:11px;border-radius:50%;display:block}
+.rb-bar span{margin-left:10px;font-size:12px;color:#5f6368;background:#fff;border-radius:999px;padding:3px 12px;flex:1;max-width:420px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rb-app{display:grid;grid-template-columns:190px 1fr;min-height:470px}
+.rb-side{border-right:1px solid #eceff1;padding:10px 8px;background:#fff}
+.rb-side button{display:flex;align-items:center;gap:10px;width:100%;border:0;background:transparent;text-align:left;padding:9px 12px;border-radius:999px;font-size:13.5px;color:#3c4043;font-weight:500}
+.rb-side button:hover{background:#f1f3f4}
+.rb-side button.on{background:#e8f0fe;color:#174ea6;font-weight:700}
+.rb-main{padding:16px 18px;overflow:auto;max-height:560px;background:#fff}
+.rb-top{display:flex;align-items:center;gap:14px;padding:10px 16px;border-bottom:1px solid #eceff1}
+.rb-logo{font-size:19px;font-weight:600;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.rb-search{flex:1;max-width:460px;display:flex;align-items:center;gap:8px;background:#f1f3f4;border-radius:10px;padding:8px 12px}
+.rb-search input{border:0;background:transparent;outline:0;font:inherit;font-size:13.5px;width:100%}
+.rb-av{width:30px;height:30px;border-radius:50%;object-fit:cover;margin-left:auto}
+.rb-btn{border:0;border-radius:999px;background:#1a73e8;color:#fff;font-weight:700;font-size:13px;padding:8px 16px}
+.rb-btn.ghost{background:#fff;color:#1a73e8;border:1px solid #dadce0}
+.rb-h{font-size:20px;font-weight:600;margin:2px 0 12px}
+.rb-muted{color:#5f6368;font-size:13px}
+.rb-sel{border:1px solid #dadce0;border-radius:8px;padding:7px 10px;font:inherit;font-size:13px;background:#fff}
+.rb-empty{padding:30px;text-align:center;color:#5f6368}
+/* ProcureIQ */
+.piq-banner{background:#e8f0fe;color:#174ea6;border-radius:10px;padding:10px 14px;font-size:13px;margin-bottom:14px}
+.piq-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.piq-card{border:1px solid #dadce0;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px}
+.piq-card .ic{font-size:30px}
+.piq-card h4{font-size:15px}
+.piq-card p{font-size:12.5px;color:#5f6368;line-height:1.4}
+.piq-sub{display:flex;align-items:center;gap:8px;font-size:12.5px;padding:6px 0;border-top:1px solid #f1f3f4}
+.piq-sub b{flex:1;font-weight:600}
+.piq-sub a{color:#1a73e8;font-weight:700;text-decoration:none;cursor:pointer}
+.piq-star{cursor:pointer;color:#bdc1c6;font-size:15px;border:0;background:none}.piq-star.on{color:#f9ab00}
+.piq-row{display:grid;grid-template-columns:40px 1fr auto;gap:12px;align-items:start;padding:12px 4px;border-bottom:1px solid #f1f3f4}
+.piq-row .ic{font-size:26px}
+.piq-row h4{font-size:14.5px}.piq-row p{font-size:12.5px;color:#5f6368}
+.sv-filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.sv-filters label{font-size:11px;color:#5f6368;display:flex;flex-direction:column;gap:2px}
+.sv-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.sv-col{border:1px solid #e3e6ea;border-radius:10px;padding:10px;min-width:0}
+.sv-col h5{font-size:13px;margin-bottom:8px}
+.sv-k{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
+.sv-k div{font-size:11px;color:#5f6368}.sv-k b{display:block;font-size:17px;color:#1a73e8}
+.sv-k em{font-style:normal;font-size:10.5px}.up{color:#188038}.dn{color:#d93025}
+.sv-li{display:grid;grid-template-columns:1fr auto auto;gap:6px;font-size:11.5px;padding:4px 0;border-bottom:1px solid #f5f5f5;cursor:pointer}
+.sv-li:hover{background:#f8f9fa}.sv-li.sel{background:#e8f0fe}
+.sv-li span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sv-bars{display:flex;align-items:flex-end;gap:8px;height:90px;margin-top:6px}
+.sv-bars div{flex:1;background:#1a73e8;border-radius:3px 3px 0 0;position:relative;transition:height .3s}
+.sv-bars div span{position:absolute;top:-15px;left:0;right:0;text-align:center;font-size:9.5px;color:#3c4043}
+.ftm-chart{display:grid;gap:8px;margin-top:10px}
+.ftm-r{display:grid;grid-template-columns:150px 1fr 70px;gap:10px;align-items:center;font-size:12.5px}
+.ftm-r .b{height:16px;border-radius:4px;background:linear-gradient(90deg,#1a73e8,#4285f4);transition:width .35s}
+.piq-form{display:grid;gap:10px;max-width:520px}
+.piq-form input,.piq-form select,.piq-form textarea{border:1px solid #dadce0;border-radius:8px;padding:9px 10px;font:inherit;font-size:13.5px}
+.piq-ok{background:#e6f4ea;color:#137333;border-radius:8px;padding:10px 12px;font-size:13px;display:none}
+/* AI Tube */
+.ait-red{height:3px;background:#d93025}
+.ait-f{display:flex;gap:10px;flex-wrap:wrap;align-items:end;margin-bottom:14px}
+.ait-f label{font-size:11px;color:#5f6368;display:flex;flex-direction:column;gap:2px}
+.ait-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ait-v{border:0;background:none;text-align:left;padding:0;cursor:pointer}
+.ait-th{aspect-ratio:16/9;border-radius:10px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:15px;padding:10px;text-align:center;line-height:1.2}
+.ait-th em{position:absolute;right:6px;bottom:6px;background:rgba(0,0,0,.75);font-style:normal;font-size:11px;padding:1px 5px;border-radius:4px;font-weight:600}
+.ait-v h4{font-size:13.5px;margin-top:7px;line-height:1.3;color:#202124}
+.ait-v p{font-size:11.5px;color:#5f6368;margin-top:2px}
+.ait-watch{display:grid;grid-template-columns:1.6fr 1fr;gap:16px}
+.ait-player{aspect-ratio:16/9;border-radius:12px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;font-weight:800;text-align:center;padding:20px}
+.ait-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;border:0;background:rgba(0,0,0,.25);cursor:pointer}
+.ait-play span{width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.92);color:#d93025;font-size:26px;display:flex;align-items:center;justify-content:center}
+.ait-prog{position:absolute;left:0;right:0;bottom:0;height:5px;background:rgba(255,255,255,.3)}.ait-prog i{display:block;height:100%;width:0;background:#d93025;transition:width .25s linear}
+.ait-tr{margin-top:10px;background:#1a73e8;color:#fff;border:0;border-radius:6px;width:100%;padding:8px;font-weight:700;font-size:13px}
+.ait-trx{display:none;background:#f8f9fa;border-radius:8px;padding:10px;font-size:12.5px;line-height:1.55;margin-top:8px}
+.ait-stars button{border:0;background:none;font-size:22px;color:#dadce0;cursor:pointer;padding:0 1px}.ait-stars button.on{color:#f9ab00}
+.ait-acc button{width:100%;text-align:left;border:0;background:#1a73e8;color:#fff;font-weight:600;font-size:13px;padding:9px 12px;border-radius:4px;margin-top:6px}
+.ait-acc div{display:none;font-size:13px;padding:8px 12px;color:#3c4043}
+.ait-acc .open+div{display:block}
+.ait-chat{display:flex;flex-direction:column;height:400px;border:1px solid #dadce0;border-radius:12px}
+.ait-msgs{flex:1;overflow:auto;padding:14px;display:flex;flex-direction:column;gap:10px;font-size:13.5px}
+.ait-msgs .me{align-self:flex-end;background:#e8f0fe;border-radius:14px 14px 2px 14px;padding:8px 12px;max-width:80%}
+.ait-msgs .bot{align-self:flex-start;background:#f1f3f4;border-radius:14px 14px 14px 2px;padding:8px 12px;max-width:85%}
+.ait-msgs .bot a{color:#1a73e8;font-weight:700;cursor:pointer;display:block;margin-top:4px}
+.ait-in{display:flex;gap:8px;padding:10px;border-top:1px solid #eceff1}
+.ait-in input{flex:1;border:1px solid #dadce0;border-radius:999px;padding:9px 14px;font:inherit;font-size:13.5px}
+.ait-sugg{display:flex;gap:6px;flex-wrap:wrap;padding:0 10px 10px}
+.ait-sugg button{border:1px solid #dadce0;background:#fff;border-radius:999px;padding:5px 10px;font-size:12px}
+/* Final Approver Training */
+.fat{font-family:"Google Sans Flex",Roboto,Arial,sans-serif}
+.fat-hd{display:flex;align-items:center;gap:14px;padding:16px 18px;border-bottom:1px solid #eceff1;flex-wrap:wrap}
+.fat-hd h4{font-size:20px}
+.fat-pr{flex:1;min-width:160px;max-width:300px;margin-left:auto}
+.fat-pr div{height:8px;background:#e8eaed;border-radius:4px;overflow:hidden}.fat-pr i{display:block;height:100%;background:#34a853;width:0;transition:width .4s}
+.fat-pr span{font-size:12px;color:#5f6368}
+.fat-mods{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:16px 18px}
+.fat-m{border:1px solid #dadce0;border-radius:12px;padding:12px;text-align:left;background:#fff;display:flex;flex-direction:column;gap:6px;position:relative;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.fat-m:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(60,64,67,.15)}
+.fat-m .il{font-size:34px}
+.fat-m b{font-size:14px}.fat-m span{font-size:12px;color:#5f6368;line-height:1.35}
+.fat-m.done:after{content:"✓ Complete";position:absolute;top:10px;right:10px;font-size:11px;font-weight:800;color:#137333;background:#e6f4ea;border-radius:999px;padding:2px 8px}
+.fat-body{padding:16px 22px 22px;display:none}
+.fat-body.on{display:block}
+.fat-hero{background:#1a73e8;color:#fff;border-radius:10px;padding:16px 18px;font-size:14.5px;line-height:1.5}
+.fat-hero h5{font-size:22px;margin-bottom:6px}
+.fat-pts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.fat-pt{border:1px solid #dadce0;border-radius:10px;padding:12px;cursor:pointer;background:#fff;text-align:left}
+.fat-pt .il{font-size:26px}.fat-pt b{display:block;font-size:13.5px;margin-top:4px}
+.fat-pt p{display:none;font-size:12.5px;color:#3c4043;margin-top:6px;line-height:1.45}
+.fat-pt.open{border-color:#1a73e8;background:#f8fbff}.fat-pt.open p{display:block}
+.fat-kt{margin-top:14px;background:#f8f9fa;border-radius:10px;padding:12px 14px;font-size:13.5px}
+.fat-kt li{margin-left:18px;margin-top:4px}
+.fat-q{border:1px solid #dadce0;border-radius:10px;padding:14px;margin-top:12px}
+.fat-q p{font-size:14px;font-weight:600}
+.fat-q button{display:block;width:100%;text-align:left;border:1px solid #dadce0;background:#fff;border-radius:8px;padding:9px 12px;margin-top:6px;font-size:13.5px}
+.fat-q button.ok{border-color:#34a853;background:#e6f4ea}.fat-q button.no{border-color:#d93025;background:#fce8e6}
+.fat-q .ex{font-size:12.5px;color:#3c4043;margin-top:8px;display:none}
+.fat-tier{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+.fat-tier div{border-radius:8px;padding:10px;color:#fff;font-size:12.5px}.fat-tier b{display:block;font-size:16px}
+.fat-cert{text-align:center;border:2px dashed #34a853;border-radius:12px;padding:20px;margin-top:12px}
+.fat-cert b{font-size:20px;color:#137333}
+/* RAF tiering tool */
+.rft-in{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:16px 18px;border-bottom:1px solid #eceff1}
+.rft-in label{font-size:12px;font-weight:700;color:#3c4043;display:flex;flex-direction:column;gap:5px}
+.rft-in input[type=range]{width:100%}
+.rft-amt{font-size:18px;font-weight:800;color:#1a73e8}
+.rft-out{display:grid;grid-template-columns:230px 1fr;gap:18px;padding:16px 18px}
+.rft-tier{border-radius:14px;padding:18px;color:#fff;text-align:center}
+.rft-tier>b{display:block;font-size:40px;line-height:1;margin:6px 0}
+.rft-tier span{font-size:13px;opacity:.95}
+.rft-why{font-size:12.5px;margin-top:10px;text-align:left;background:rgba(255,255,255,.18);border-radius:8px;padding:8px 10px;line-height:1.45}
+.rft-steps{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.rft-st{border:1px dashed #bdc1c6;border-radius:12px;padding:10px;font-size:12.5px;color:#3c4043}
+.rft-st h6{font-size:12px;color:#fff;background:#4285f4;border-radius:4px;padding:3px 8px;display:inline-block;margin-bottom:8px}
+.rft-chain{display:flex;flex-direction:column;gap:6px}
+.rft-chain div{display:flex;align-items:center;gap:6px;font-weight:600}
+.rft-chain div:before{content:"✓";width:20px;height:20px;border-radius:50%;background:#34a853;color:#fff;font-size:11px;display:flex;align-items:center;justify-content:center;flex:none}
+.rft-sla{font-size:12px;color:#5f6368;margin-top:10px}
+.rft-tbl{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:4px}
+.rft-tbl th,.rft-tbl td{border:1px solid #e3e6ea;padding:7px 8px;text-align:left}
+.rft-tbl th{color:#fff}.rft-tbl td.hit{background:#fef7e0;font-weight:700}
+@media (max-width:820px){
+  .rb-app{grid-template-columns:1fr}
+  .rb-side{display:flex;gap:4px;overflow-x:auto;border-right:0;border-bottom:1px solid #eceff1;padding:8px}
+  .rb-side button{width:auto;white-space:nowrap;padding:7px 12px}
+  .rb-main{max-height:none;padding:14px}
+  .rb-top .rb-search{display:none}
+  .piq-grid,.ait-grid,.fat-mods,.fat-pts{grid-template-columns:1fr 1fr!important}
+  .sv-grid{grid-template-columns:1fr 1fr!important}
+  .ait-watch,.rft-out{grid-template-columns:1fr!important}
+  .rft-in{grid-template-columns:1fr 1fr!important}
+  .rft-steps{grid-template-columns:1fr 1fr!important}
+  .fat-tier{grid-template-columns:1fr 1fr!important}
+  .ftm-r{grid-template-columns:100px 1fr 60px}
+  .rb-note{margin-left:0}
+}
+@media (max-width:480px){.piq-grid,.ait-grid,.fat-mods,.fat-pts,.sv-grid{grid-template-columns:1fr!important}}
+
 </style>
 </head>
 <body>
@@ -1065,6 +1227,27 @@ section.blk{padding:12px 0}
       </div>
     </div>
       </div>
+
+<div class="rb" id="rbRaf">
+  <div class="rb-head"><b>Try it: RAF tiering &amp; approval tool</b><span class="rb-tag">Interactive</span><span class="rb-note">Built from the tiering criteria and step-by-step process below</span></div>
+  <div class="rb-win">
+    <div class="rb-bar"><i style="background:#ea4335"></i><i style="background:#fbbc04"></i><i style="background:#34a853"></i><span>raf-intake.corp/tiering</span></div>
+    <div class="rft-in">
+      <label>Region<select class="rb-sel" id="rfReg"><option>NORAM</option><option>EMEA</option><option>APAC</option><option>CALA</option></select></label>
+      <label>Spend amount <span class="rft-amt" id="rfAmtL">$25M</span><input type="range" id="rfAmt" min="0" max="100" value="45" aria-label="Spend amount"></label>
+      <label>Circumstance<select class="rb-sel" id="rfCir"><option value="1">New spend</option><option value="2" selected>Current-year, pre-approved</option><option value="3">Historical</option></select></label>
+      <label>Alphabet representative<select class="rb-sel" id="rfRep"><option value="1">SVP+</option><option value="2">Country head / VP</option><option value="3" selected>Sr. Director or below</option></select></label>
+    </div>
+    <div class="rft-out">
+      <div class="rft-tier" id="rfTier"></div>
+      <div>
+        <div class="rft-steps" id="rfSteps"></div>
+        <div class="rft-sla">Highest tier across all three criteria wins. Standard SLA: 2 weeks minimum; leadership approvals collected weekly.</div>
+      </div>
+    </div>
+    <div style="padding:0 18px 18px"><table class="rft-tbl" id="rfTbl"></table></div>
+  </div>
+</div>
       <div class="shots">
         <img class="zoom" src="img/deck/d20.jpg" alt="Introducing the APAC AI for Society initiative">
         <img class="zoom" src="img/deck/d21.jpg" alt="Step-by-step approval process">
@@ -1121,6 +1304,16 @@ section.blk{padding:12px 0}
           <div class="vcap">▶ Final Approver Training: fiduciary duty, SOX controls and signature authority</div>
         </div>
       </div>
+
+<div class="rb" id="rbFat">
+  <div class="rb-head"><b>Try it: Final Approver Training, rebuilt</b><span class="rb-tag">Interactive</span><span class="rb-note">Illustrative rebuild · condensed course content</span></div>
+  <div class="rb-win fat">
+    <div class="rb-bar"><i style="background:#ea4335"></i><i style="background:#fbbc04"></i><i style="background:#34a853"></i><span>learning.corp/final-approver-training</span></div>
+    <div class="fat-hd"><span style="font-size:30px">🚀</span><div><h4>Final Approver Training</h4><div class="rb-muted">For Directors &amp; above approving deal spend</div></div><div class="fat-pr"><span id="fatPt">0 of 7 modules complete</span><div><i id="fatBar"></i></div></div></div>
+    <div class="fat-mods" id="fatMods"></div>
+    <div class="fat-body" id="fatBody"></div>
+  </div>
+</div>
     </div>
     <!-- Team 2 -->
     <div class="tpanel" data-p="2">
@@ -1139,6 +1332,25 @@ section.blk{padding:12px 0}
           <div class="vcap">▶ ProcureIQ walkthrough: Core Spend → SpendView → FTM report <span class="chip">Top-line totals blurred</span></div>
         </div>
       </div>
+
+<div class="rb" id="rbPiq">
+  <div class="rb-head"><b>Try it: ProcureIQ, rebuilt</b><span class="rb-tag">Interactive</span><span class="rb-note">Illustrative rebuild · suppliers and figures invented</span></div>
+  <div class="rb-win">
+    <div class="rb-bar"><i style="background:#ea4335"></i><i style="background:#fbbc04"></i><i style="background:#34a853"></i><span>procureiq.corp/home</span></div>
+    <div class="rb-top"><div class="rb-logo">🛒 ProcureIQ</div><div class="rb-search">🔍<input id="piqQ" placeholder="Search for anything" aria-label="Search ProcureIQ products"></div><span class="rb-av" style="background:#1a73e8;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px">RO</span></div>
+    <div class="rb-app">
+      <nav class="rb-side" id="piqNav">
+        <button data-v="intake">➕ New Intake</button>
+        <button data-v="home" class="on">🏠 Home</button>
+        <button data-v="products">📦 Products</button>
+        <button data-v="spend">📊 SpendView</button>
+        <button data-v="ftm">💸 FTM Report</button>
+        <button data-v="help">❔ Help</button>
+      </nav>
+      <div class="rb-main" id="piqMain"></div>
+    </div>
+  </div>
+</div>
     </div>
     <!-- Team 3 -->
     <div class="tpanel" data-p="3">
@@ -1153,6 +1365,25 @@ section.blk{padding:12px 0}
         </div>
         <div id="aitubeMedia"><div class="vbox"><video controls preload="metadata" playsinline poster="img/poster_aitube.jpg" aria-label="AI Tube for Finance walkthrough"><source src="media/aitube.mp4" type="video/mp4"></video></div><div class="vcap">▶ AI Tube for Finance: browse by topic, watch a demo, glossary &amp; chatbot entry</div></div>
       </div>
+
+<div class="rb" id="rbAit">
+  <div class="rb-head"><b>Try it: AI Tube, rebuilt</b><span class="rb-tag">Interactive</span><span class="rb-note">Illustrative rebuild · contributors anonymized</span></div>
+  <div class="rb-win">
+    <div class="rb-bar"><i style="background:#ea4335"></i><i style="background:#fbbc04"></i><i style="background:#34a853"></i><span>aitube.corp/finance</span></div>
+    <div class="rb-top"><div class="rb-logo"><span style="background:#d93025;color:#fff;border-radius:6px;padding:0 6px">▶</span> AI Tube <span class="rb-muted" style="font-size:15px">| Finance</span></div><div class="rb-search">🔍<input id="aitQ" placeholder="Search demos" aria-label="Search AI Tube"></div></div>
+    <div class="ait-red"></div>
+    <div class="rb-app">
+      <nav class="rb-side" id="aitNav">
+        <button data-v="home" class="on">🏠 Home</button>
+        <button data-v="welcome">👋 Welcome</button>
+        <button data-v="saved">🔖 Saved videos</button>
+        <button data-v="glossary">📖 Glossary</button>
+        <button data-v="chat">💬 Ask AI Tube</button>
+      </nav>
+      <div class="rb-main" id="aitMain"></div>
+    </div>
+  </div>
+</div>
     </div>
     <!-- Team 4 -->
     <div class="tpanel" data-p="4">
@@ -1685,6 +1916,171 @@ section.blk{padding:12px 0}
     function step(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/1200);el.textContent=pre+Math.round(to*(1-Math.pow(1-p,3)))+suf;if(p<1)requestAnimationFrame(step)}
     requestAnimationFrame(step);
   });
+})();
+</script>
+<script>
+/* ===== interactive rebuilds ===== */
+(function(){
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fm=v=>v>=1e9?'$'+(v/1e9).toFixed(2)+'B':v>=1e6?'$'+(v/1e6).toFixed(1)+'M':v>=1e3?'$'+(v/1e3).toFixed(0)+'K':'$'+v.toFixed(0);
+function navInit(nav,fn){$$('button',nav).forEach(b=>b.addEventListener('click',()=>{$$('button',nav).forEach(x=>x.classList.toggle('on',x===b));fn(b.dataset.v)}))}
+function setNav(nav,v){$$('button',nav).forEach(x=>x.classList.toggle('on',x.dataset.v===v))}
+
+/* ---------- ProcureIQ ---------- */
+const piq=$('#piqMain');
+if(piq){
+ const P=[
+  {n:'Core Spend',ic:'💼',d:'Single source of truth for invoice & PO spend reporting.',subs:['SpendView','FTM (Follow The Money) Report'],own:'Procurement Data & Insights',tag:'spend'},
+  {n:'Buying Hub Reporting Pipeline',ic:'🛍️',d:'Purchase-request pipeline from intake to PO.',subs:['PR.X-Executive','PR.X-PSP'],own:'Buying Hub Ops',tag:'pipeline'},
+  {n:'Preferred Supplier Reporting',ic:'🤝',d:'Program health and spend with preferred suppliers.',subs:['Program view','Executive view'],own:'Supplier Programs',tag:'supplier'},
+  {n:'SpendShift Analysis',ic:'🔀',d:'Where spend moved quarter over quarter, by category and supplier.',subs:['Category shifts'],own:'Category Mgmt',tag:'spend'},
+  {n:'PR.X-Category',ic:'🗂️',d:'Purchase requests by category with cycle-time SLAs.',subs:['Cycle time'],own:'Buying Hub Ops',tag:'pipeline'},
+  {n:'PR.X-Cloud',ic:'☁️',d:'Cloud-related purchase requests and approvals.',subs:['Approvals'],own:'Cloud Procurement',tag:'pipeline'},
+  {n:'PR.X-CSAT',ic:'⭐',d:'Requester satisfaction after each purchase.',subs:['Survey results'],own:'Buying Hub Ops',tag:'pipeline'},
+  {n:'Spend Insights (Invoice/PO)',ic:'📉',d:'Legacy dashboard, replaced by SpendView.',subs:[],own:'Procurement Data & Insights',tag:'spend',dep:1}
+ ];
+ const fav=new Set(['Core Spend']);
+ const CAT=[['Information Technology',.22],['Marketing Services',.16],['Real Estate & Facilities',.14],['Product Services',.12],['Enterprise Services',.1],['Operations Goods',.09],['Operations Services',.08],['Travel & Entertainment',.05],['Non Procurable',.04]];
+ const PA=[['Technical Infrastructure',.27],['Google Cloud',.17],['Platforms + Devices',.14],['Marketing',.12],['YouTube',.1],['Finance',.07],['Core',.06],['REWS-GSRS',.04],['Other PAs',.03]];
+ const SUP=['Northwind Systems','Contoso Media','Fabrikam Facilities','Tailspin Logistics','Litware Cloud','Adatum Consulting','Proseware Labs','Wingtip Travel','Lucerne Print'];
+ const st={yr:'2024',rg:'All',pa:'All',cat:null};
+ function hash(s){let h=7;for(const c of s)h=(h*31+c.charCodeAt(0))%9973;return h/9973}
+ function base(){const y={2022:.82,2023:.91,2024:1}[st.yr];const r={All:1,NORAM:.52,EMEA:.24,APAC:.17,CALA:.07}[st.rg];const p=st.pa==='All'?1:PA.find(x=>x[0]===st.pa)[1];return 4.8e9*y*r*p}
+ function card(p){return `<div class="piq-card"><div style="display:flex;justify-content:space-between"><span class="ic">${p.ic}</span><button class="piq-star ${fav.has(p.n)?'on':''}" data-f="${esc(p.n)}" aria-label="Favorite">★</button></div><h4>${esc(p.n)}</h4><p>${esc(p.d)}</p>${p.subs.map(s=>`<div class="piq-sub"><b>${esc(s)}</b><a data-go="${/SpendView/.test(s)?'spend':/FTM/.test(s)?'ftm':''}">Open ↗</a></div>`).join('')}</div>`}
+ function wire(){$$('.piq-star',piq).forEach(b=>b.onclick=()=>{const n=b.dataset.f;fav.has(n)?fav.delete(n):fav.add(n);render(cur)});$$('[data-go]',piq).forEach(a=>a.onclick=()=>{const g=a.dataset.go;if(g){setNav($('#piqNav'),g);render(g)}else a.textContent='Opened ✓'})}
+ let cur='home';
+ function render(v){cur=v;let h='';const q=($('#piqQ').value||'').toLowerCase();
+  if(q&&v!=='spend'&&v!=='ftm'&&v!=='intake'){v='products'}
+  if(v==='home'){h=`<div class="piq-banner">👋 Welcome to ProcureIQ: one place to find every procurement product, dashboard and data source.</div><div class="rb-h">⭐ Your favorites</div><div class="piq-grid">${P.filter(p=>fav.has(p.n)).map(card).join('')||'<div class="rb-muted">Star a product to pin it here.</div>'}</div><div class="rb-h" style="margin-top:18px">Featured products</div><div class="piq-grid">${P.slice(0,3).map(card).join('')}</div>`}
+  else if(v==='products'){const L=P.filter(p=>!q||(p.n+p.d+p.subs.join(' ')+p.own).toLowerCase().includes(q));h=`<div class="rb-h">Products ${q?`<span class="rb-muted">matching “${esc(q)}”</span>`:''}</div>`+(L.map(p=>`<div class="piq-row"><span class="ic">${p.ic}</span><div><h4>${esc(p.n)} ${p.dep?'<span class="rb-tag" style="background:#fce8e6;color:#c5221f">Deprecated</span>':''}</h4><p>${esc(p.d)}</p><p>Product owner: ${esc(p.own)} · Technical owner: Data Eng</p></div><div style="display:flex;gap:6px"><button class="rb-btn ghost" data-go="">Details</button><button class="rb-btn" data-go="${p.tag==='spend'&&!p.dep?'spend':''}">Application</button></div></div>`).join('')||'<div class="rb-empty">No products match. Try “spend” or “PR.X”.</div>')}
+  else if(v==='spend'){const B=base();const sel=st.cat?CAT.find(c=>c[0]===st.cat)[1]:1;const T=B*sel;const yo={2022:4.1,2023:11,2024:9.9}[st.yr];
+   const opt=(a,c)=>a.map(x=>`<option ${x===c?'selected':''}>${x}</option>`).join('');
+   const yrs=['2022','2023','2024'].map(y=>({y,v:4.8e9*{2022:.82,2023:.91,2024:1}[y]*({All:1,NORAM:.52,EMEA:.24,APAC:.17,CALA:.07}[st.rg])*(st.pa==='All'?1:PA.find(x=>x[0]===st.pa)[1])*sel}));const mx=Math.max(...yrs.map(x=>x.v));
+   h=`<div class="rb-h">SpendView</div><div class="sv-filters"><label>Time period<select class="rb-sel" data-k="yr">${opt(['2022','2023','2024'],st.yr)}</select></label><label>Region<select class="rb-sel" data-k="rg">${opt(['All','NORAM','EMEA','APAC','CALA'],st.rg)}</select></label><label>Product area<select class="rb-sel" data-k="pa">${opt(['All',...PA.map(x=>x[0])],st.pa)}</select></label>${st.cat?`<button class="rb-btn ghost" id="svClr">✕ ${esc(st.cat)}</button>`:''}</div>
+   <div class="sv-grid"><div class="sv-col"><h5>Summary</h5><div class="sv-k"><div>Total invoice spend<b>${fm(T)}</b><em class="up">▲ ${yo}% YoY</em></div><div>Total PO amount<b>${fm(T*1.08)}</b><em class="up">▲ ${(yo+1.3).toFixed(1)}%</em></div><div># Invoices<b>${Math.round(T/41000).toLocaleString()}</b></div><div># POs<b>${Math.round(T/118000).toLocaleString()}</b></div></div><div class="sv-bars">${yrs.map(x=>`<div style="height:${x.v/mx*100}%;${x.y===st.yr?'':'opacity:.45'}"><span>${x.y}</span></div>`).join('')}</div></div>
+   <div class="sv-col"><h5>Supplier</h5>${SUP.map((s,i)=>{const w=(.2-i*.018)*(0.85+hash(s+st.yr+st.rg+st.pa)*.3);return `<div class="sv-li"><span>${s}</span><span>${fm(T*w)}</span><span class="${hash(s+st.yr)>.35?'up':'dn'}">${hash(s+st.yr)>.35?'▲':'▼'}</span></div>`}).join('')}</div>
+   <div class="sv-col"><h5>Category L1 <span class="rb-muted">(click to filter)</span></h5>${CAT.map(c=>`<div class="sv-li ${st.cat===c[0]?'sel':''}" data-c="${c[0]}"><span>${c[0].toUpperCase()}</span><span>${fm(B*c[1])}</span><span class="rb-muted">${Math.round(c[1]*100)}%</span></div>`).join('')}</div>
+   <div class="sv-col"><h5>Product Area</h5>${PA.map(p=>`<div class="sv-li"><span>${p[0]}</span><span>${fm((st.pa==='All'?B:B/PA.find(x=>x[0]===st.pa)[1])*p[1]*sel)}</span><span></span></div>`).join('')}</div></div>`}
+  else if(v==='ftm'){const B=base();h=`<div class="rb-h">FTM (Follow The Money) Report</div><div class="piq-banner">Glossary: <b>Direct</b> spend goes into products we sell; <b>Indirect</b> spend runs the business. Taxonomy Level 1 is the broadest category.</div><div class="sv-filters"><label>View<select class="rb-sel" id="ftmV"><option value="a">Annual spend, Alphabet-wide</option><option value="t">By taxonomy level 1</option></select></label><label>Spend type<select class="rb-sel" id="ftmD"><option>All</option><option>Direct</option><option>Indirect</option></select></label></div><div class="ftm-chart" id="ftmC"></div>`}
+  else if(v==='intake'){h=`<div class="rb-h">New intake request</div><div class="piq-form"><input id="inT" placeholder="What do you need? e.g., a dashboard of cloud spend by team"><select id="inK"><option>New report or dashboard</option><option>Access to an existing product</option><option>Data source onboarding</option><option>Bug or data issue</option></select><textarea rows="3" placeholder="Business justification"></textarea><button class="rb-btn" id="inGo" style="justify-self:start">Submit request</button><div class="piq-ok" id="inOk"></div></div>`}
+  else {h=`<div class="rb-h">Help</div><p class="rb-muted" style="font-size:14px;line-height:1.6">ProcureIQ is an internal “App Store” for procurement: every product lists its owners, a description and a link to the live application. Use search to find a product, star it to pin it to Home, or file a New Intake if what you need doesn’t exist yet.</p>`}
+  piq.innerHTML=h;wire();
+  $$('.sv-filters select[data-k]',piq).forEach(s=>s.onchange=()=>{st[s.dataset.k]=s.value;render('spend')});
+  $$('.sv-li[data-c]',piq).forEach(r=>r.onclick=()=>{st.cat=st.cat===r.dataset.c?null:r.dataset.c;render('spend')});
+  const c=$('#svClr',piq);if(c)c.onclick=()=>{st.cat=null;render('spend')};
+  if(v==='ftm'){const draw=()=>{const B=base(),vw=$('#ftmV').value,d=$('#ftmD').value,k=d==='All'?1:d==='Direct'?.38:.62;let rows=vw==='a'?[['2020',.66],['2021',.74],['2022',.82],['2023',.91],['2024',1]].map(r=>[r[0],4.8e9*r[1]*k]):CAT.map(c=>[c[0],B*c[1]*k]);const m=Math.max(...rows.map(r=>r[1]));$('#ftmC').innerHTML=rows.map(r=>`<div class="ftm-r"><span>${r[0]}</span><div class="b" style="width:${r[1]/m*100}%"></div><b>${fm(r[1])}</b></div>`).join('')};$('#ftmV').onchange=draw;$('#ftmD').onchange=draw;draw()}
+  if(v==='intake')$('#inGo').onclick=()=>{const o=$('#inOk');o.style.display='block';o.textContent='✓ Request PIQ-'+(4100+Math.floor(Math.random()*800))+' submitted: “'+($('#inT').value||$('#inK').value)+'”. The product owner will triage within 2 business days.'};
+ }
+ navInit($('#piqNav'),v=>{if(v!=='products')$('#piqQ').value='';render(v)});
+ $('#piqQ').addEventListener('input',()=>{setNav($('#piqNav'),'products');render('products')});
+ render('home');
+}
+
+/* ---------- AI Tube ---------- */
+const ait=$('#aitMain');
+if(ait){
+ const G=['#4285f4','#ea4335','#fbbc04','#34a853','#a142f4','#00897b'];
+ const V=[
+  {t:'Create the perfect task tracker in Gemini',topic:'Productivity',tool:'Gemini',ev:'2025 Power Up',by:'Analyst, FP&A',len:'4:12',d:'Prompting Gemini to turn a messy to-do list into a prioritized tracker with owners and due dates.',tr:'Start with your raw list. Ask Gemini to group it by project, assign an owner column and sort by due date. Then ask it to flag anything overdue.'},
+  {t:'Saved Preferences in Gemini',topic:'Productivity',tool:'Gemini',ev:'Finance Academy',by:'Manager, Treasury',len:'2:48',d:'Set your formatting and tone once so every answer comes back the way finance needs it.',tr:'Open settings, add saved info such as “show figures in millions with one decimal” and “cite the source tab”. Every new chat will follow it.'},
+  {t:'Using AI Studio for Form2Buganizer automation with Apps Script',topic:'Automation',tool:'AI Studio',ev:'2025 Power Up',by:'Analyst, Procurement',len:'7:35',d:'Turn form submissions into tracked tickets automatically.',tr:'A form response triggers an Apps Script. The script calls a model to summarize and categorize the request, then files a ticket with the right component and priority.'},
+  {t:'Apps Script automation using Gemini',topic:'Automation',tool:'Apps Script',ev:'Finance Academy',by:'Sr. Analyst, Tax',len:'5:20',d:'Have Gemini write the Apps Script that refreshes and emails a monthly variance sheet.',tr:'Describe the sheet and the email you want. Paste the generated script, set a monthly time trigger, and test with yourself as the recipient.'},
+  {t:'Create a chatbot using Agent Studio',topic:'Chatbots',tool:'Agent Studio',ev:'2025 Power Up',by:'Analyst, Controllership',len:'6:02',d:'A policy Q&A bot grounded on your team’s own documents.',tr:'Upload the policy docs as a knowledge source, write instructions to only answer from them and to link the source, then share the agent with your team.'},
+  {t:'Commercial review mail-out with NotebookLM',topic:'Reporting',tool:'NotebookLM',ev:'Finance Academy',by:'Manager, Commercial Finance',len:'3:55',d:'Summarize a deal review pack into a one-page mail-out for leadership.',tr:'Add the deck and the model as sources. Ask for a one-page summary with risks, asks and the decision needed. Edit and send.'}
+ ];
+ const GL=[['Algorithm','A set of step-by-step rules a computer follows to solve a problem.'],['API','A way for one program to request data or actions from another.'],['Apps Script','Google’s JavaScript platform for automating Workspace apps like Sheets and Gmail.'],['Automation','The use of technology to perform tasks with minimal human intervention.'],['Bias','Systematic error in a model’s output, often inherited from its training data.'],['Big Data','Data sets too large or complex for traditional tools.'],['Categorization','Sorting items into labeled groups, by rules or by a model.'],['Chatbot','A program that holds a conversation and answers questions.'],['Prompt','The instruction you give a model; better context gives better answers.']];
+ const saved=new Set(), rate={};
+ const F={topic:'All',ev:'All',by:'All',tool:'All'};
+ const th=(v,i,big)=>`<div class="${big?'ait-player':'ait-th'}" style="background:linear-gradient(135deg,${G[i%6]},${G[(i+2)%6]})">${big?'':esc(v.tool)+`<em>${v.len}</em>`}`;
+ function grid(L){return L.length?`<div class="ait-grid">${L.map(v=>{const i=V.indexOf(v);return `<button class="ait-v" data-w="${i}">${th(v,i)}</div><h4>${esc(v.t)}</h4><p>${esc(v.by)} · ${esc(v.ev)}${saved.has(i)?' · 🔖':''}</p></button>`}).join('')}</div>`:'<div class="rb-empty">No demos match those filters. Hit Reset.</div>'}
+ function wire(){$$('[data-w]',ait).forEach(b=>b.onclick=()=>watch(+b.dataset.w))}
+ function home(){const q=($('#aitQ').value||'').toLowerCase();const o=(k,a)=>`<label>${k}<select class="rb-sel" data-f="${k.toLowerCase()==='event'?'ev':k.toLowerCase()==='contributor'?'by':k.toLowerCase()}"><option>All</option>${[...new Set(V.map(v=>v[a]))].map(x=>`<option ${F[a]===x?'selected':''}>${esc(x)}</option>`).join('')}</select></label>`;
+  const L=V.filter(v=>Object.keys(F).every(k=>F[k]==='All'||v[k]===F[k])&&(!q||(v.t+v.d+v.tool+v.topic).toLowerCase().includes(q)));
+  ait.innerHTML=`<div class="ait-f">${o('Topic','topic')}${o('Event','ev')}${o('Contributor','by')}${o('Tool','tool')}<button class="rb-btn" style="background:#d93025" id="aitPU">2025 Power Up: AI Player’s Choice</button><button class="rb-btn ghost" id="aitR">Reset</button></div>${grid(L)}`;
+  $$('select[data-f]',ait).forEach(s=>s.onchange=()=>{F[s.dataset.f]=s.value;home()});
+  $('#aitR').onclick=()=>{Object.keys(F).forEach(k=>F[k]='All');$('#aitQ').value='';home()};
+  $('#aitPU').onclick=()=>{Object.keys(F).forEach(k=>F[k]='All');F.ev='2025 Power Up';home()};wire()}
+ let tm=null;
+ function watch(i){clearInterval(tm);const v=V[i];setNav($('#aitNav'),'');
+  ait.innerHTML=`<button class="rb-btn ghost" id="aitBk" style="margin-bottom:10px">← Back</button><div class="ait-watch"><div>${th(v,i,1)}<div style="position:relative;z-index:1">${esc(v.t)}</div><button class="ait-play" id="aitPl" aria-label="Play"><span>▶</span></button><div class="ait-prog"><i id="aitPg"></i></div></div><h4 style="margin-top:10px;font-size:16px">${esc(v.t)}</h4><p class="rb-muted">${esc(v.by)} · ${esc(v.ev)} · ${v.len}</p><p style="font-size:13.5px;margin-top:6px">${esc(v.d)}</p></div><div><div class="ait-stars" id="aitSt">${[1,2,3,4,5].map(n=>`<button data-r="${n}" class="${(rate[i]||0)>=n?'on':''}" aria-label="${n} stars">★</button>`).join('')}</div><div class="rb-muted" id="aitSm">${rate[i]?'Thanks! You rated this '+rate[i]+'/5':'Submit your rating'}</div><button class="rb-btn ghost" id="aitSv" style="margin-top:10px">${saved.has(i)?'🔖 Saved':'🔖 Save for later'}</button><button class="ait-tr" id="aitTr">Transcript</button><div class="ait-trx" id="aitTx">${esc(v.tr)}</div><div class="rb-muted" style="margin-top:12px">Topic: ${esc(v.topic)} · Tool: ${esc(v.tool)}</div></div></div>`;
+  $('#aitBk').onclick=()=>{clearInterval(tm);setNav($('#aitNav'),'home');home()};
+  $('#aitPl').onclick=e=>{const b=e.currentTarget;b.style.display='none';let p=0;tm=setInterval(()=>{p+=2;const g=$('#aitPg');if(!g){clearInterval(tm);return}g.style.width=Math.min(p,100)+'%';if(p>=100){clearInterval(tm);b.style.display='flex';b.innerHTML='<span>↻</span>'}},120)};
+  $$('#aitSt button').forEach(b=>b.onclick=()=>{rate[i]=+b.dataset.r;$$('#aitSt button').forEach(x=>x.classList.toggle('on',+x.dataset.r<=rate[i]));$('#aitSm').textContent='Thanks! You rated this '+rate[i]+'/5'});
+  $('#aitSv').onclick=e=>{saved.has(i)?saved.delete(i):saved.add(i);e.currentTarget.textContent=saved.has(i)?'🔖 Saved':'🔖 Save for later'};
+  $('#aitTr').onclick=()=>{const t=$('#aitTx');t.style.display=t.style.display==='block'?'none':'block'}}
+ function chat(){ait.innerHTML=`<div class="ait-chat"><div class="ait-msgs" id="aitM"><div class="bot">Have a question about an AI tool or application? I search every demo transcript. Ask your question!</div></div><div class="ait-sugg">${['How do I automate a report?','Build a chatbot','Summarize a deck'].map(s=>`<button>${s}</button>`).join('')}</div><div class="ait-in"><input id="aitCi" placeholder="Ask about a tool or task"><button class="rb-btn" id="aitCg">Ask</button></div></div>`;
+  const ask=q=>{if(!q.trim())return;const M=$('#aitM');M.insertAdjacentHTML('beforeend',`<div class="me">${esc(q)}</div>`);const w=q.toLowerCase().split(/\W+/).filter(x=>x.length>2);const sc=V.map((v,i)=>({i,s:w.reduce((a,x)=>a+((v.t+' '+v.d+' '+v.tr+' '+v.tool+' '+v.topic).toLowerCase().includes(x)?1:0),0)})).filter(x=>x.s).sort((a,b)=>b.s-a.s).slice(0,2);
+   M.insertAdjacentHTML('beforeend',`<div class="bot">${sc.length?'Here’s what I found in the transcripts:'+sc.map(x=>`<a data-w="${x.i}">▶ ${esc(V[x.i].t)}</a><span class="rb-muted" style="font-size:12px">${esc(V[x.i].tr.split('. ')[0])}.</span>`).join(''):'I couldn’t find that in any transcript yet. Have a demo to add? Submit it from the Welcome page.'}</div>`);M.scrollTop=M.scrollHeight;$('#aitCi').value='';$$('[data-w]',M).forEach(a=>a.onclick=()=>watch(+a.dataset.w))};
+  $('#aitCg').onclick=()=>ask($('#aitCi').value);$('#aitCi').onkeydown=e=>{if(e.key==='Enter')ask(e.target.value)};$$('.ait-sugg button',ait).forEach(b=>b.onclick=()=>ask(b.textContent))}
+ function view(v){clearInterval(tm);if(v==='home')home();
+  else if(v==='welcome')ait.innerHTML=`<div class="rb-h">Welcome to AI Tube</div><p style="font-size:14px;line-height:1.6"><b>What is AI Tube?</b> A YouTube-style library where Finance teammates share short demos of how they use AI in their day-to-day work.</p><p style="font-size:14px;line-height:1.6;margin-top:10px"><b>How to navigate:</b> search or use the drop-downs to filter by topic, event, contributor or tool · bookmark videos to your Saved list · ask the chatbot a question across every transcript · check the glossary for terms.</p><p style="font-size:14px;line-height:1.6;margin-top:10px"><b>Have a demo to add?</b> Record it in under 8 minutes and submit through the contribution form.</p><button class="rb-btn" style="margin-top:12px" id="aitGo">Browse demos →</button>`;
+  else if(v==='saved')ait.innerHTML=`<div class="rb-h">Saved videos</div>`+(saved.size?grid([...saved].map(i=>V[i])):'<div class="rb-empty">Nothing saved yet. Open a demo and tap “Save for later”.</div>');
+  else if(v==='glossary')ait.innerHTML=`<div class="rb-h">Glossary</div><div class="ait-acc">${GL.map(g=>`<button>${g[0]}</button><div>${g[1]}</div>`).join('')}</div>`;
+  else chat();
+  wire();const g=$('#aitGo');if(g)g.onclick=()=>{setNav($('#aitNav'),'home');home()};
+  $$('.ait-acc button',ait).forEach(b=>b.onclick=()=>b.classList.toggle('open'))}
+ navInit($('#aitNav'),view);
+ $('#aitQ').addEventListener('input',()=>{setNav($('#aitNav'),'home');home()});
+ home();
+}
+
+/* ---------- Final Approver Training ---------- */
+const fm2=$('#fatMods');
+if(fm2){
+ const M=[
+  {il:'🧭',t:'Being a fiduciary',s:'Delegation of authority and your duty to the company',pts:[['📜','Delegation of authority','Approval authority is delegated from the Board down. When you approve, you act for the company, within your limit and no further.'],['⚖️','Fiduciary responsibilities','Duty of care: be informed before you approve. Duty of loyalty: put the company’s interest ahead of your own or your team’s.'],['🔎','Deal review','Check that the deal matches the business case: amount, term, counterparty and any non-standard terms.']]},
+  {il:'🛡️',t:'SOX issues & controls',s:'Why approvals are a financial control',pts:[['🧾','Approvals are controls','An approval is evidence auditors rely on. A rubber-stamp is a control failure.'],['✂️','No splitting','Breaking one purchase into smaller ones to stay under a limit is a control violation.'],['📁','Keep evidence','Approve in the system of record so the trail is complete.']]},
+  {il:'🏛️',t:'Legal considerations',s:'Contract terms that need Legal',pts:[['📝','Non-standard terms','Exclusivity, uncapped liability or auto-renewals need Legal review before approval.'],['🌐','Regulatory exposure','Deals touching competitors or government entities carry extra review.'],['🤝','Side letters','No side agreements outside the signed contract.']]},
+  {il:'🔒',t:'Understanding privilege',s:'Protecting attorney–client communications',pts:[['✉️','What’s privileged','Communications seeking legal advice from counsel.'],['🚫','What isn’t','Copying a lawyer on a business email doesn’t make it privileged.'],['🏷️','Label carefully','Mark privileged material and keep its distribution narrow.']]},
+  {il:'✍️',t:'Commitment & signature authority',s:'Who can sign for how much',pts:[['🪜','Know your tier','Your limit depends on your level and the type of spend.'],['📈','Total contract value','Limits apply to the full value over the life of the deal, not one year.'],['⬆️','Escalate','Above your limit, route up. Never sign and ask later.']],tiers:1},
+  {il:'🎯',t:'Putting it into practice',s:'Scenario quiz',quiz:1},
+  {il:'🏁',t:'Wrapping up',s:'Key takeaways and completion',end:1}
+ ];
+ const Q=[
+  {q:'A 3-year deal is $4M per year. Your approval limit is $10M. Can you approve it?',a:['Yes, each year is under $10M','No, total contract value is $12M, so escalate','Yes, if Finance agrees verbally'],c:1,x:'Limits apply to total contract value over the life of the deal: $12M is above $10M.'},
+  {q:'A vendor asks you to split a $2M order into four $500K POs so it clears faster. You:',a:['Split it, the total is the same','Decline: splitting to avoid an approval limit is a control violation','Split it but tell your manager'],c:1,x:'Splitting a purchase to stay under a threshold defeats the control. This is a SOX issue.'},
+  {q:'You add a lawyer to a business email about pricing strategy. Is it privileged?',a:['Yes, a lawyer is on it','Only if you label it privileged','Not by default: privilege covers seeking legal advice'],c:2,x:'Copying counsel doesn’t create privilege. The communication must seek legal advice.'}
+ ];
+ const done=new Set(), ans={};
+ function prog(){$('#fatPt').textContent=done.size+' of 7 modules complete';$('#fatBar').style.width=done.size/7*100+'%';grid()}
+ function grid(){fm2.innerHTML=M.map((m,i)=>`<button class="fat-m ${done.has(i)?'done':''}" data-m="${i}"><span class="il">${m.il}</span><b>${i+1}. ${m.t}</b><span>${m.s}</span></button>`).join('');$$('.fat-m',fm2).forEach(b=>b.onclick=()=>open(+b.dataset.m))}
+ const body=$('#fatBody');
+ function nextBtn(i){return i<6?`<button class="rb-btn" data-n="${i+1}" style="margin-top:14px">Complete &amp; continue →</button>`:''}
+ function open(i){const m=M[i];let h=`<div class="fat-hero"><h5>${m.il} ${m.t}</h5>${m.s}</div>`;
+  if(m.pts){h+=`<div class="rb-muted" style="margin-top:12px">Tap each card to learn more</div><div class="fat-pts">${m.pts.map(p=>`<button class="fat-pt"><span class="il">${p[0]}</span><b>${p[1]}</b><p>${p[2]}</p></button>`).join('')}</div>`;
+   if(m.tiers)h+=`<div class="fat-tier">${[['Manager','≤ $250K','#4285f4'],['Director','≤ $10M','#34a853'],['VP','≤ $50M','#f9ab00'],['SVP+','≤ $100M+','#ea4335']].map(t=>`<div style="background:${t[2]}">${t[0]}<b>${t[1]}</b></div>`).join('')}</div><div class="rb-muted" style="font-size:11.5px;margin-top:4px">Illustrative limits for training purposes.</div>`;
+   h+=nextBtn(i)}
+  else if(m.quiz){h+=Q.map((q,k)=>`<div class="fat-q" data-q="${k}"><p>${k+1}. ${q.q}</p>${q.a.map((a,j)=>`<button data-a="${j}">${a}</button>`).join('')}<div class="ex">${q.x}</div></div>`).join('')+`<div id="fatSc" class="rb-muted" style="margin-top:10px"></div>`}
+  else {h+=`<div class="fat-kt"><b>Key takeaways</b><ul><li>Read and understand anything you sign or approve.</li><li>Act in the best interests of the company.</li><li>Act in good faith, putting substance over form.</li></ul></div>`+(done.size>=6?`<div class="fat-cert"><b>🎉 Course complete</b><div class="rb-muted">You’re cleared as a Final Approver.</div></div>`:`<div class="rb-muted" style="margin-top:10px">Finish the other modules to complete the course (${done.size}/6 done).</div>`)}
+  body.innerHTML=h;body.classList.add('on');
+  if(m.end&&done.size>=6){done.add(6);prog()}
+  $$('.fat-pt',body).forEach(b=>b.onclick=()=>b.classList.toggle('open'));
+  $$('[data-n]',body).forEach(b=>b.onclick=()=>{done.add(i);prog();open(+b.dataset.n)});
+  $$('.fat-q',body).forEach(qd=>{const k=+qd.dataset.q;$$('button',qd).forEach(b=>b.onclick=()=>{if(ans[k]!=null)return;ans[k]=+b.dataset.a;b.classList.add(ans[k]===Q[k].c?'ok':'no');qd.querySelector(`[data-a="${Q[k].c}"]`).classList.add('ok');qd.querySelector('.ex').style.display='block';const n=Object.keys(ans).length;if(n===Q.length){const s=Q.filter((q,j)=>ans[j]===q.c).length;$('#fatSc').innerHTML=`<b>Score: ${s}/${Q.length}</b> ${s>=2?'· Passed ✓':'· Review the modules and try again'} <button class="rb-btn" id="fatNx" style="margin-left:8px">${s>=2?'Continue →':'Retry'}</button>`;$('#fatNx').onclick=()=>{if(s>=2){done.add(5);prog();open(6)}else{Object.keys(ans).forEach(k=>delete ans[k]);open(5)}}}})});
+  body.scrollIntoView({block:'nearest',behavior:'smooth'})}
+ grid();
+}
+
+/* ---------- RAF tiering ---------- */
+const rfT=$('#rfTier');
+if(rfT){
+ const TH={NORAM:[1e9,1e7],EMEA:[1e9,1e7],APAC:[5e8,1e7],CALA:[1e8,1e6]};
+ const COL={1:'#d93025',2:'#f29900',3:'#188038'};
+ const amt=()=>{const x=+$('#rfAmt').value/100;return Math.round(Math.pow(10,5+x*5)/1e5)*1e5};// $100K – $10B log scale
+ function draw(){const r=$('#rfReg').value,a=amt(),t=TH[r];const at=a>=t[0]?1:a>=t[1]?2:3;const ct=+$('#rfCir').value,rt=+$('#rfRep').value;const T=Math.min(at,ct,rt);
+  $('#rfAmtL').textContent=fm(a);
+  const why=[['Amount',at,`${fm(a)} in ${r}`],['Circumstance',ct,$('#rfCir').selectedOptions[0].text],['Representative',rt,$('#rfRep').selectedOptions[0].text]];
+  rfT.style.background=COL[T];
+  rfT.innerHTML=`<span>Request tier</span><b>Tier ${T}</b><span>${T===1?'Highest scrutiny':T===2?'Director-level review':'Standard review'}</span><div class="rft-why">${why.map(w=>`${w[1]===T?'<b>➜ ':''}${w[0]}: T${w[1]} (${esc(w[2])})${w[1]===T?'</b>':''}`).join('<br>')}</div>`;
+  const rv=T===3?['RAF Lead review']:T===2?['RAF Lead review','RAF Director','FP&A Director']:['RAF Lead review','RAF Director','Finance Director','VP / BPO leadership review'];
+  $('#rfSteps').innerHTML=[['1 · Intake',['Request submitted','Tearsheet created','RM tiering assessment']],['2 · Compilation',['RM contacts cross-functional team','Downstream teams produce data','Data reviewed for accuracy']],['3 · Review',rv],['4 · Archive',['RM closes tearsheet']]].map((s,k)=>`<div class="rft-st" style="${k===2?'border:2px solid '+COL[T]+';background:#fffdf7':''}"><h6 style="${k===2?'background:'+COL[T]:''}">${s[0]}</h6><div class="rft-chain">${s[1].map(x=>`<div>${x}</div>`).join('')}</div></div>`).join('');
+  const hd=['Region','Tier 1','Tier 2','Tier 3'];
+  $('#rfTbl').innerHTML=`<tr>${hd.map((h,i)=>`<th style="background:${i?COL[i]:'#3c4043'}">${h}</th>`).join('')}</tr>`+Object.entries(TH).filter(([k])=>k!=='EMEA').map(([k,v])=>`<tr><td>${k==='NORAM'?'NORAM &amp; EMEA':k}</td><td class="${(k===r||(k==='NORAM'&&r==='EMEA'))&&at===1?'hit':''}">≥ ${fm(v[0])}</td><td class="${(k===r||(k==='NORAM'&&r==='EMEA'))&&at===2?'hit':''}">≥ ${fm(v[1])}</td><td class="${(k===r||(k==='NORAM'&&r==='EMEA'))&&at===3?'hit':''}">&lt; ${fm(v[1])}</td></tr>`).join('');
+ }
+ ['rfReg','rfAmt','rfCir','rfRep'].forEach(id=>$('#'+id).addEventListener('input',draw));
+ draw();
+}
 })();
 </script>
 </body>
