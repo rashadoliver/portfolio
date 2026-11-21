@@ -1398,7 +1398,7 @@ section.blk{padding:12px 0}
 <section class="blk" id="top"><div class="wrap"><div class="panel rv"><div class="pad">
   <div class="hero">
     <div class="side">
-      <div class="avatar" id="avatar" role="button" tabindex="-1" aria-label="Play a short message from RaShad"><video id="avv" playsinline preload="auto" src="media/message.mp4" aria-label="Message from RaShad"></video><img src="img/deck/d00.jpg" alt="RaShad Oliver"><span class="play" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#fff"/></svg></span></div><div class="msgnote">Watch my message</div><div class="msgctl" id="msgctl"><button id="mPlay" aria-label="Pause message"><span class="ic">❚❚</span><span class="tx">Pause</span></button><button id="mMute" aria-label="Unmute">🔇 Tap for sound</button><button id="mBig" aria-label="Watch full screen">⤢ Full screen</button></div>
+      <div class="avatar" id="avatar"><img src="img/deck/d00.jpg" alt="RaShad Oliver"></div>
       <div class="mosaic">
         <img class="zoom" src="img/deck/genesis_team.jpg" alt="Leading a Genesis2Genesis conference at Google" title="Genesis2Genesis conference, Google">
         <img class="zoom" src="img/deck/jazz_court.jpg" alt="Center court with the Utah Jazz" title="Utah Jazz, summer 2021">
@@ -1409,7 +1409,6 @@ section.blk{padding:12px 0}
     <div>
       <div class="hello">Hi, I’m RaShad!</div>
       <div class="sub">Former Finance @ Google &amp; Microsoft &nbsp;|&nbsp; Harvard SVMP ’23 &nbsp;|&nbsp; Howard BBA, Finance</div>
-      <div class="prepared"><b>FOR</b> Memphis-Shelby County Schools · Budget &amp; Fiscal Planning · Senior Budget Analyst</div>
 
       <div class="stats">
         <div class="stat"><div class="n" data-count="700" data-suf="M">700M</div><div class="x">Surface users analyzed for lifetime-value cohorts at Microsoft</div></div>
@@ -1943,9 +1942,7 @@ section.blk{padding:12px 0}
   <div>Elijah “RaShad” Oliver · Memphis, TN · elijaholiver21@gmail.com · 901.273.4237 · rashadoliver.com</div>
 </div></footer>
 
-<button class="fmsg" id="fmsg" aria-label="Play my message"><svg class="ring" viewBox="0 0 64 64"><circle cx="32" cy="32" r="29" class="bg"/><circle cx="32" cy="32" r="29" class="pr" id="fmsgPr"/></svg><img src="img/deck/d00.jpg" alt=""><span class="ico" id="fmsgIco">▶</span><span class="lab" id="fmsgLab">Watch my message</span></button>
 <div id="lb" role="dialog" aria-label="Enlarged image"><img alt=""></div>
-<div id="mv" role="dialog" aria-label="Message from RaShad"><button class="x" aria-label="Close">×</button><div class="mvwrap"><img class="mvph" src="img/deck/d00.jpg" alt=""><video controls playsinline preload="none" poster="img/deck/d00.jpg"></video></div></div>
 
 <script>
 (function(){
@@ -2026,32 +2023,6 @@ section.blk{padding:12px 0}
     mv.querySelectorAll('.thumbs button').forEach(function(b){b.onclick=function(){mv.querySelectorAll('.thumbs button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');document.getElementById('slimg').src=b.dataset.s;document.getElementById('slno').textContent='Slide '+b.dataset.n+' of 2'}})}
   document.querySelectorAll('.frow[data-f],.ftab').forEach(function(r){r.addEventListener('click',function(){openFile(r.dataset.f)})});
   openFile('sql');
-
-  /* ---------- personal message: fades in behind headshot on first visit ---------- */
-  var av=document.getElementById('avatar'),avv=document.getElementById('avv'),mvd=document.getElementById('mv'),mvv=mvd.querySelector('video'),ctl=document.getElementById('msgctl'),bP=document.getElementById('mPlay'),bM=document.getElementById('mMute'),bB=document.getElementById('mBig');
-  mvv.src='media/message.mp4';av.classList.add('has-msg');av.tabIndex=0;
-  function seen(){try{return localStorage.getItem('ro_msg_seen')==='1'}catch(e){return false}}
-  function markSeen(){try{localStorage.setItem('ro_msg_seen','1')}catch(e){}}
-  function ui(){var on=!avv.paused&&!avv.ended;av.classList.toggle('playing',on);av.classList.toggle('paused',!on&&av.classList.contains('started'));fui(on);ctl.classList.toggle('show',on||av.classList.contains('started'));bP.querySelector('.ic').textContent=on?'❚❚':'▶';bP.querySelector('.tx').textContent=on?'Pause':(avv.ended?'Replay':'Play');bP.setAttribute('aria-label',on?'Pause message':'Play message');bM.style.display=avv.muted&&on?'':'none'}
-  function startAv(sound){av.classList.add('started');avv.muted=!sound;var p=avv.play();if(p&&p.catch)p.catch(function(){avv.muted=true;avv.play().catch(function(){})});markSeen()}
-  ['play','pause','ended','volumechange'].forEach(function(ev){avv.addEventListener(ev,ui)});
-  /* floating mini control, bottom right, once the headshot scrolls away */
-  var fm=document.getElementById('fmsg'),fpr=document.getElementById('fmsgPr'),fic=document.getElementById('fmsgIco'),flb=document.getElementById('fmsgLab'),C=2*Math.PI*29;fpr.style.strokeDasharray=C;fpr.style.strokeDashoffset=C;
-  function fui(on){fic.textContent=on?'❚❚':'▶';flb.textContent=on?(avv.muted?'Tap for sound':'Pause message'):(avv.ended?'Replay message':(av.classList.contains('started')?'Resume message':'Watch my message'));fm.setAttribute('aria-label',flb.textContent);fm.classList.toggle('on2',on)}
-  avv.addEventListener('timeupdate',function(){if(avv.duration)fpr.style.strokeDashoffset=C*(1-avv.currentTime/avv.duration)});
-  fm.onclick=function(){if(!avv.paused&&avv.muted){avv.muted=false;ui();return}bP.click()};
-  if('IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){fm.classList.toggle('show',!e.isIntersecting)})},{threshold:0}).observe(av)}
-  avv.addEventListener('ended',function(){av.classList.remove('playing')});
-  if(!seen()&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){setTimeout(function(){startAv(true)},1500)}
-  av.addEventListener('click',function(){if(avv.paused){if(avv.ended)avv.currentTime=0;startAv(true)}else if(avv.muted){avv.muted=false}else avv.pause()});
-  av.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();av.click()}});
-  bP.onclick=function(){if(avv.paused){if(avv.ended)avv.currentTime=0;startAv(!avv.muted||true)}else avv.pause()};
-  bM.onclick=function(){avv.muted=false};
-  function openMsg(){var t=avv.currentTime||0;avv.pause();mvd.classList.add('on','playing');mvv.currentTime=t;mvv.muted=false;var p=mvv.play();if(p&&p.catch)p.catch(function(){})}
-  bB.onclick=openMsg;
-  function closeMsg(){if(!mvd.classList.contains('on'))return;mvv.pause();avv.currentTime=mvv.currentTime;mvd.classList.remove('on');ui()}
-  mvd.querySelector('.x').onclick=closeMsg;mvd.addEventListener('click',function(e){if(e.target===mvd)closeMsg()});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMsg()});
 
   /* ---------- UTAH JAZZ: Ticketmaster-style suite inventory (illustrative) ---------- */
   (function(){
