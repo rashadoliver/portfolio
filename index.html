@@ -1485,8 +1485,8 @@ section.blk{padding:12px 0}
 .pp-rail .pp-th{flex:1;aspect-ratio:16/9;background:#fff;border:2px solid transparent;font-style:normal;font-size:9.5px;color:#333;display:flex;align-items:center;justify-content:center;text-align:center;padding:4px;box-shadow:0 1px 2px rgba(0,0,0,.15)}
 .pp-rail button.on .pp-th{border-color:#c43e1c}
 .pp-main{padding:14px;display:flex;flex-direction:column;gap:10px;min-width:0}
-.pp-stage{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.15);aspect-ratio:16/9;overflow:hidden;position:relative}
-.pp-stage .pslide{position:absolute;inset:0;margin:0;border:0;box-shadow:none;height:100%;overflow:auto}
+.pp-stage{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.15);overflow:hidden;position:relative;height:400px}
+.pp-stage .pslide{position:absolute;left:0;top:0;width:960px;height:540px;margin:0;border:0;box-shadow:none;overflow:hidden;transform-origin:0 0;box-sizing:border-box}
 .pp-notes{background:#fff;border:1px solid #d6d6d6;padding:8px 12px;font-size:12.5px;color:#333;line-height:1.45}
 .pp-notes b{display:block;font-size:11px;color:#666;margin-bottom:2px}
 .pp-status{display:flex;justify-content:space-between;font-size:11.5px;color:#555;padding:4px 12px;background:#f3f3f3;border-top:1px solid #d6d6d6}
@@ -1515,9 +1515,18 @@ section.blk{padding:12px 0}
 .pp.present .pp-rib,.pp.present .pp-rail,.pp.present .pp-notes,.pp.present .pp-status{display:none}
 .pp.present .pp-tools{display:flex}
 .pp.present .pp-body{display:flex;flex:1}.pp.present .pp-main{flex:1;justify-content:center;align-items:center}
-.pp.present .pp-stage{width:min(96vw,calc(92vh*16/9))}
+.pp.present .pp-stage{width:min(94vw,calc(88vh*16/9));box-shadow:none}
 .pp.present:before{content:"← → to move · Esc to exit";position:fixed;bottom:12px;left:50%;transform:translateX(-50%);color:#aaa;font:12px Arial}
-@media (max-width:820px){.xl-body{grid-template-columns:1fr}.xl-pane{border-left:0;border-top:1px solid #d6d6d6}.pp-body{grid-template-columns:1fr}.pp-rail{flex-direction:row;overflow-x:auto}.pp-rail button{flex:0 0 110px}.pz{grid-template-columns:1fr 1fr}.wi{grid-template-columns:1fr}.pp-stage{aspect-ratio:auto;min-height:460px}.pp-stage .pslide{position:relative}}
+@media (max-width:820px){.xl-body{grid-template-columns:1fr}.xl-pane{border-left:0;border-top:1px solid #d6d6d6}.pp-body{grid-template-columns:1fr}.pp-rail{flex-direction:row;overflow-x:auto}.pp-rail button{flex:0 0 110px}.pz{grid-template-columns:1fr 1fr}.wi{grid-template-columns:1fr}}
+
+.pz-c{min-height:150px;justify-content:flex-start}.pz-c b{font-size:17px}
+.pz{margin-top:30px;gap:18px}.pz-c{min-height:330px;padding:0 0 16px;overflow:hidden}.pz-c .pz-n,.pz-c b,.pz-c>span:last-child{margin:0 16px}.pz-c .pz-n{margin-top:-14px;position:relative;box-shadow:0 0 0 4px #fff}
+.pv{height:170px;background:#f6f7f9;border-bottom:1px solid #eee;display:flex;align-items:flex-end;justify-content:center;gap:6px;padding:18px}
+.pv-t{flex-direction:column;align-items:stretch;justify-content:center;gap:8px}.pv-t i{display:block;height:14px;background:#d9e2f3;border-radius:2px}.pv-t i:nth-child(odd){background:#b4c7e7}
+.pv-b i{display:block;flex:1;border-radius:2px 2px 0 0}
+.pv-s{flex-direction:column;align-items:center;justify-content:center}.pv-s b{font-size:34px;color:#c43e1c}.pv-s span{width:80%;height:6px;background:#ddd;border-radius:3px;position:relative;margin-top:14px}.pv-s span i{position:absolute;left:0;top:0;bottom:0;width:35%;background:#c43e1c;border-radius:3px}
+.pv-r{flex-direction:column;align-items:center;justify-content:center;background:#c43e1c;color:#fff;text-align:center}.pv-r b{font-size:54px;line-height:1}.pv-r span{font-size:12px;margin-top:8px}
+.pz-c .pv-r b,.pz-c .pv-r span{color:#fff!important;margin:0!important}.pz-c .pv-s b{color:#c43e1c!important;font-size:34px!important;margin:0!important}.pz-c .pv-r b{font-size:54px!important}
 .msv{margin-top:14px}.explorer .exbody,.explorer .exfiles,.explorer .exside{min-height:0!important;height:auto!important}
 .cases .two{grid-template-columns:1fr 1fr}
 #raf .rafwork{grid-template-columns:repeat(5,1fr)}@media (max-width:820px){#raf .rafwork{grid-template-columns:1fr 1fr}}
@@ -2212,7 +2221,8 @@ section.blk{padding:12px 0}
 
   /* PowerPoint: Summary Zoom, Morph transitions, what-if slide, speaker notes, presenter mode */
   var WI={pop:'Surface',pts:10};
-  function slideZoom(){return '<div class="ps-t">Surface S-Mode User LTV Analysis</div><div class="ps-sub">Summary Zoom: click a section to jump in</div><div class="pz">'+[['1','Sizing the S-Mode population','Overview'],['2','Lifetime value by price band','PSM chart'],['3','What if more users stayed?','What-if'],['4','Recommendation','Ask']].map(function(z,i){return '<button class="pz-c" data-go="'+(i+1)+'"><span class="pz-n">'+z[0]+'</span><b>'+z[1]+'</b><span>'+z[2]+'</span></button>'}).join('')+'</div><div class="ps-foot">FY22 Surface Finance · intern project · rebuilt from memory, figures illustrative</div>'}
+  function slideZoom(){var pv=['<div class="pv pv-t">'+'<i></i>'.repeat(5)+'</div>','<div class="pv pv-b">'+[27,76,42,84,9,81,26,92].map(function(h,i){return '<i style="height:'+h+'%;background:'+(i%2?'#4472c4':'#a5a5a5')+'"></i>'}).join('')+'</div>','<div class="pv pv-s"><b>$562K</b><span><i></i></span></div>','<div class="pv pv-r"><b>9×</b><span>Make S-Mode less restrictive</span></div>'];
+    return '<div class="ps-t">Surface S-Mode User LTV Analysis</div><div class="ps-sub">Summary Zoom · click a section to jump in</div><div class="pz">'+[['1','Sizing the S-Mode population','Overview'],['2','Lifetime value by price band','PSM chart'],['3','What if more users stayed?','What-if model'],['4','Recommendation','The ask']].map(function(z,i){return '<button class="pz-c" data-go="'+(i+1)+'">'+pv[i]+'<span class="pz-n">'+z[0]+'</span><b>'+z[1]+'</b><span>'+z[2]+'</span></button>'}).join('')+'</div><div class="ps-foot">FY22 Surface Finance · intern project · rebuilt from memory, figures illustrative</div>'}
   function slideWhatIf(){return '<div class="ps-t">What if more users stayed in S-Mode?</div><div class="ps-sub">Each device kept in S-Mode earns the S-Mode lifetime value instead of the Windows Home one.</div><div class="wi"><div class="wi-in"><div class="wi-tg"><button data-p="Surface" class="'+(WI.pop==='Surface'?'on':'')+'">Surface</button><button data-p="OEM" class="'+(WI.pop==='OEM'?'on':'')+'">Windows OEM</button></div><label>Reduce switch-outs by <b id="wiP">'+WI.pts+' pts</b><input type="range" id="wiR" min="0" max="30" value="'+WI.pts+'"></label><div class="wi-as" id="wiAs"></div></div><div class="wi-out" id="wiOut"></div></div><div class="ps-foot">Illustrative assumptions: 60% of S-Mode devices switch out today; uplift = S-Mode minus Windows Home 5-year LTV, averaged across price bands.</div>'}
   function wiDraw(){var a=WI.pop==='Surface'?{n:61800,u:91}:{n:1040000,u:138},kept=Math.round(a.n*WI.pts/100),inc=kept*a.u;
     var as=document.getElementById('wiAs'),o=document.getElementById('wiOut');if(!o)return;document.getElementById('wiP').textContent=WI.pts+' pts';
@@ -2222,16 +2232,22 @@ section.blk{padding:12px 0}
   var NOTES=['Open with the question leadership asked: is S-Mode worth keeping? Then show the four parts so they know where we are going.','First, make sure the populations are real. S-Mode is about 10% of Surface and 1% of OEM, and that share holds by cohort and by monthly active devices.','The headline: at every price band, S-Mode devices earn far more over their lifetime, up to 9× on low-cost OEM. Hover the bars to see which streams drive it.','Translate it into money. Move the slider: even a 10-point drop in switch-outs adds meaningful lifetime revenue per cohort, and it scales fast on OEM.','The ask: make S-Mode less restrictive so users stay. Next step would be testing which restrictions drive the most switch-outs.'];
   var DECK2=[slideZoom,slide1,slide2,slideWhatIf,slide3],CUR=0;
   function pptHTML(){return '<div class="vtitle p">P &nbsp;Surface Smode User LTV Analysis.pptx <span class="sp" id="slno">Slide 1 of 5</span></div><div class="pp"><div class="pp-rib"><span>Home</span><span>Insert</span><span>Design</span><span class="on">Transitions</span><span>Animations</span><span>Slide Show</span><span>Review</span><div class="pp-tools"><span class="pp-morph">◆ Morph</span><span>Summary Zoom</span><button class="pp-pres" id="ppPres">▶ Present</button></div></div><div class="pp-body"><div class="pp-rail" id="pthumbs"></div><div class="pp-main"><div class="pp-stage"><div class="pslide" id="pslide"></div></div><div class="pp-notes"><b>Speaker notes</b><span id="ppN"></span></div></div></div><div class="pp-status"><span id="ppS">Slide 1 of 5</span><span>Transition: Morph · Notes · ▦ ▤ ⊟ 72%</span></div></div><div class="vcapt">Click a slide, use the Summary Zoom cards, or hit Present and use the arrow keys. Slide 4 is a live what-if model.</div>'}
+  function fitSlide(){var st=document.querySelector('.pp-stage'),el=document.getElementById('pslide');if(!st||!el)return;var k=st.clientWidth/960;el.style.transform='scale('+k+')';st.style.height=(540*k)+'px'}
   function show2(n,dir){var el=document.getElementById('pslide');if(!el)return;CUR=n;el.classList.remove('morph-l','morph-r');void el.offsetWidth;el.innerHTML=DECK2[n]();el.classList.add(dir<0?'morph-r':'morph-l');
     var t='Slide '+(n+1)+' of 5';document.getElementById('slno').textContent=t;var ps=document.getElementById('ppS');if(ps)ps.textContent=t;var nn=document.getElementById('ppN');if(nn)nn.textContent=NOTES[n];
     [].forEach.call(document.querySelectorAll('#pthumbs button'),function(b,j){b.classList.toggle('on',j===n)});
     if(n===2){drawPS('usd');[].forEach.call(document.querySelectorAll('#psTg button'),function(b){b.onclick=function(){[].forEach.call(document.querySelectorAll('#psTg button'),function(x){x.classList.toggle('on',x===b)});drawPS(b.dataset.m)}})}
     if(n===0)[].forEach.call(el.querySelectorAll('[data-go]'),function(b){b.onclick=function(){show2(+b.dataset.go,1)}});
+    fitSlide();
     if(n===3){var r=document.getElementById('wiR');r.oninput=function(){WI.pts=+r.value;wiDraw()};[].forEach.call(el.querySelectorAll('[data-p]'),function(b){b.onclick=function(){WI.pop=b.dataset.p;[].forEach.call(el.querySelectorAll('[data-p]'),function(x){x.classList.toggle('on',x===b)});wiDraw()}});wiDraw()}}
   function initPPT(){var th=document.getElementById('pthumbs');th.innerHTML='';['Summary Zoom','Overview','PSM by price band','What-if model','Recommendation'].forEach(function(t,j){var b=document.createElement('button');b.innerHTML='<span>'+(j+1)+'</span><i class="pp-th">'+t+'</i>';b.onclick=function(){show2(j,j<CUR?-1:1)};th.appendChild(b)});show2(0,1);
-    var pp=document.querySelector('.pp');document.getElementById('ppPres').onclick=function(){pp.classList.toggle('present');this.textContent=pp.classList.contains('present')?'✕ Exit':'▶ Present';if(pp.classList.contains('present')&&pp.requestFullscreen)pp.requestFullscreen().catch(function(){})};
-    if(!window._ppKeys){window._ppKeys=1;document.addEventListener('keydown',function(e){var p=document.querySelector('.pp.present');if(!p)return;if(e.key==='ArrowRight'||e.key===' ')show2(Math.min(4,CUR+1),1);if(e.key==='ArrowLeft')show2(Math.max(0,CUR-1),-1);if(e.key==='Escape'){p.classList.remove('present');document.getElementById('ppPres').textContent='▶ Present'}});
-      document.addEventListener('fullscreenchange',function(){var p=document.querySelector('.pp');if(p&&!document.fullscreenElement&&p.classList.contains('present')){p.classList.remove('present');document.getElementById('ppPres').textContent='▶ Present'}})}}
+    var pp=document.querySelector('.pp');var ph=document.createComment('pp');
+    function exitP(){if(!pp.classList.contains('present'))return;pp.classList.remove('present');if(ph.parentNode)ph.parentNode.replaceChild(pp,ph);document.getElementById('ppPres').textContent='▶ Present';document.body.style.overflow='';if(document.fullscreenElement)document.exitFullscreen().catch(function(){});setTimeout(fitSlide,50)}
+    window._ppExit=exitP;
+    document.getElementById('ppPres').onclick=function(){if(pp.classList.contains('present')){exitP();return}pp.parentNode.replaceChild(ph,pp);document.body.appendChild(pp);pp.classList.add('present');this.textContent='✕ Exit';document.body.style.overflow='hidden';if(pp.requestFullscreen)pp.requestFullscreen().catch(function(){});setTimeout(fitSlide,60)};
+    if(window.ResizeObserver)new ResizeObserver(fitSlide).observe(pp.querySelector('.pp-stage'));window.addEventListener('resize',fitSlide);
+    if(!window._ppKeys){window._ppKeys=1;document.addEventListener('keydown',function(e){var p=document.querySelector('.pp.present');if(!p)return;if(e.key==='ArrowRight'||e.key===' ')show2(Math.min(4,CUR+1),1);if(e.key==='ArrowLeft')show2(Math.max(0,CUR-1),-1);if(e.key==='Escape'&&window._ppExit)window._ppExit()});
+      document.addEventListener('fullscreenchange',function(){var p=document.querySelector('.pp.present');if(p&&!document.fullscreenElement&&window._ppExit)window._ppExit();setTimeout(fitSlide,60)})}}
 
   var views={
     sql:'<div class="vtitle s">{ } cohort_build.sql <span class="sp">SQL Server · read-only</span></div><div class="vstage" style="background:#252526"><pre class="sql">'+sql+'</pre></div><div class="vcapt">The kind of query I learned to write to build the S-Mode cohorts that feed the Excel model.</div>',
