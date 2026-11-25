@@ -1,0 +1,23 @@
+{
+  "name": "Receipts — career tools with proof",
+  "short_name": "Receipts",
+  "description": "Résumé builder, six-second check, interview mode, job tailoring, cover letters, recommendation kit, networking kit, and the offer call. Everything stays on your device.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f8f9fa",
+  "theme_color": "#1a73e8",
+  "lang": "en",
+  "categories": ["productivity", "education", "business"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Résumé Builder", "url": "./#builder", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Résumé Check", "url": "./#check", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Tailor to a Job", "url": "./#tailor", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}
