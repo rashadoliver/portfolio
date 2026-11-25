@@ -1534,6 +1534,7 @@ section.blk{padding:12px 0}
 .msv{margin-top:14px}.explorer .exbody,.explorer .exfiles,.explorer .exside{min-height:0!important;height:auto!important}
 .cases .two{grid-template-columns:1fr 1fr}
 #raf .rafwork{grid-template-columns:repeat(5,1fr)}@media (max-width:820px){#raf .rafwork{grid-template-columns:1fr 1fr}}
+@media (min-width:800px){.hlgrid{align-items:stretch}.hcards{grid-auto-rows:1fr}.hcard{padding:18px 20px}.hcard .n{min-width:96px;font-size:25px;text-align:center}.hcard .t{font-size:16.5px}.hcard .s{font-size:14px}}
 </style>
 </head>
 <body>
@@ -1602,11 +1603,10 @@ section.blk{padding:12px 0}
         <a class="rbtile" href="#genesis" data-team="2" data-rb="rbPiq"><div class="rbt-h" style="color:#1a73e8">Procure<span>I</span><b style="color:#1e8e3e;font-weight:400">Q</b></div><div class="rbt-art"><img src="../img/rb/piq_core.svg" alt=""><img src="../img/rb/piq_tags.svg" alt=""><img src="../img/rb/piq_pie.svg" alt=""></div><div class="rbt-t">ProcureIQ &amp; SpendView</div><div class="rbt-s">Google’s procurement “app store” and its spend dashboard</div><span class="rbt-go">Try it ›</span></a>
       </div>
       <div class="hcards">
-        <a class="hcard" href="#raf" style="border-left-color:#0b3d91"><span class="n" style="color:#0b3d91">$200M+</span><span><span class="t">Budget vs. actual reconciliation</span><br><span class="s">Google · grant budgets tied out with each team</span></span><span class="go" aria-hidden="true">›</span></a>
-        <a class="hcard" href="#microsoft" style="border-left-color:#0078d4"><span class="n" style="color:#0078d4">5-yr</span><span><span class="t">Lifetime value forecast</span><br><span class="s">Microsoft · SQL cohorts &amp; Power BI model, 700M users</span></span><span class="go" aria-hidden="true">›</span></a>
-        <a class="hcard" href="#jazz" style="border-left-color:#5b2a86"><span class="n" style="color:#5b2a86">$165M</span><span><span class="t">Revenue reconciliation &amp; forecasting</span><br><span class="s">Utah Jazz · every suite contract, season by season</span></span><span class="go" aria-hidden="true">›</span></a>
-        <a class="hcard" href="#genesis" data-team="1" style="border-left-color:#1a73e8"><span class="n" style="color:#1a73e8">QoQ</span><span><span class="t">Spend review &amp; policy-violation report</span><br><span class="s">Google · quarterly for Directors; repeat violations fell</span></span><span class="go" aria-hidden="true">›</span></a>
-        <a class="hcard" href="#raf" style="border-left-color:#188038"><span class="n" style="color:#188038">Weekly</span><span><span class="t">Executive reporting</span><br><span class="s">Google · presented to a Director or SVP; CIO headcount analysis</span></span><span class="go" aria-hidden="true">›</span></a>
+        <a class="hcard" href="#genesis" data-team="1" style="border-left-color:#1a73e8"><span class="n" style="color:#1a73e8">QoQ</span><span><span class="t">Spend review &amp; policy report</span><br><span class="s">Quarterly for Google Directors</span></span><span class="go" aria-hidden="true">›</span></a>
+        <a class="hcard" href="#raf" style="border-left-color:#188038"><span class="n" style="color:#188038">Weekly</span><span><span class="t">Executive reporting</span><br><span class="s">To a Google Director or SVP</span></span><span class="go" aria-hidden="true">›</span></a>
+        <a class="hcard" href="#raf" style="border-left-color:#0b3d91"><span class="n" style="color:#0b3d91">CIO</span><span><span class="t">Headcount analysis</span><br><span class="s">For Alphabet’s Chief Investment Officer</span></span><span class="go" aria-hidden="true">›</span></a>
+        <a class="hcard" href="#raf" style="border-left-color:#d93025"><span class="n" style="color:#d93025">9</span><span><span class="t">Antitrust &amp; M&amp;A matters</span><br><span class="s">Finance data for Google’s attorneys</span></span><span class="go" aria-hidden="true">›</span></a>
       </div>
     </div>
   </div>
@@ -1682,29 +1682,6 @@ section.blk{padding:12px 0}
       <div class="rw"><div class="n">200+ pp</div><div class="x">Finance, antitrust &amp; ops playbooks that power an AI copilot</div></div>
     </div>
     <div class="orgcall"><div class="oc-n">$1B+</div><div><b>Google.org grants: the core of my work.</b> I was the primary person on the team responsible for fulfilling Google.org grants, with over $1 billion in personal scope. I reviewed and approved international philanthropic grants, and because the work touched every time zone, it never really slept.</div></div>
-    <div class="rb" id="rbRaf">
-  <div class="rb-head"><b>What one request went through, from intake to sign-off</b><span class="rb-tag">Interactive walkthrough</span></div>
-  <p class="rft-lede">Every request I handled ran through this process. Change the amount, the region or who is asking, and watch the review get heavier. At my volume that meant <b>$1B+ in Google.org grants</b>, requests from every time zone, and leadership approvals collected every week.</p>
-  <div class="rb-win">
-    <div class="rb-bar"><i style="background:#ea4335"></i><i style="background:#fbbc04"></i><i style="background:#34a853"></i><span>raf-intake.corp/tiering</span></div>
-    <div class="rft-in">
-      <label>Region<select class="rb-sel" id="rfReg"><option>NORAM</option><option>EMEA</option><option>APAC</option><option>CALA</option></select></label>
-      <label>Spend amount <span class="rft-amt" id="rfAmtL">$25M</span><input type="range" id="rfAmt" min="0" max="100" value="45" aria-label="Spend amount"></label>
-      <label>Circumstance<select class="rb-sel" id="rfCir"><option value="1">New spend</option><option value="2" selected>Current-year, pre-approved</option><option value="3">Historical</option></select></label>
-      <label>Alphabet representative<select class="rb-sel" id="rfRep"><option value="1">SVP+</option><option value="2">Country head / VP</option><option value="3" selected>Sr. Director or below</option></select></label>
-    </div>
-    <div class="rft-out">
-      <div class="rft-tier" id="rfTier"></div>
-      <div>
-        <div class="rft-steps" id="rfSteps"></div>
-        <div class="rft-sum" id="rfSum"></div>
-        <div class="rft-sla">Highest tier across all three criteria wins. Standard SLA: 2 weeks minimum; leadership approvals collected weekly.</div>
-      </div>
-    </div>
-    <div style="padding:0 18px 18px"><table class="rft-tbl" id="rfTbl"></table></div>
-  </div>
-</div>
-
     <div class="rafrow">
       <div class="cases">
       <h3>Antitrust &amp; M&amp;A matters I supported</h3>
@@ -1738,6 +1715,29 @@ section.blk{padding:12px 0}
       </div>
       <div class="lwin" style="--h:430px"><div class="lwin-bar" style="background:#f1f3f4"><i style="background:#ea4335"></i><i style="background:#fbbc04"></i><i style="background:#34a853"></i><span>blog.google · Introducing the APAC AI for Society initiative</span><a href="https://blog.google/around-the-globe/google-asia/introducing-the-apac-ai-for-society-initiative/" target="_blank" rel="noopener">Open ↗</a></div><div class="lwin-view" data-live="https://blog.google/around-the-globe/google-asia/introducing-the-apac-ai-for-society-initiative/" data-vw="1200" style="background-image:url(../img/deck/d20.jpg)"><iframe title="blog.google · Introducing the APAC AI for Society initiative (live)" loading="lazy"></iframe></div></div>
     </div>
+    <div class="rb" id="rbRaf">
+  <div class="rb-head"><b>What one request went through, from intake to sign-off</b><span class="rb-tag">Interactive walkthrough</span></div>
+  <p class="rft-lede">Every request I handled ran through this process. Change the amount, the region or who is asking, and watch the review get heavier. At my volume that meant <b>$1B+ in Google.org grants</b>, requests from every time zone, and leadership approvals collected every week.</p>
+  <div class="rb-win">
+    <div class="rb-bar"><i style="background:#ea4335"></i><i style="background:#fbbc04"></i><i style="background:#34a853"></i><span>raf-intake.corp/tiering</span></div>
+    <div class="rft-in">
+      <label>Region<select class="rb-sel" id="rfReg"><option>NORAM</option><option>EMEA</option><option>APAC</option><option>CALA</option></select></label>
+      <label>Spend amount <span class="rft-amt" id="rfAmtL">$25M</span><input type="range" id="rfAmt" min="0" max="100" value="45" aria-label="Spend amount"></label>
+      <label>Circumstance<select class="rb-sel" id="rfCir"><option value="1">New spend</option><option value="2" selected>Current-year, pre-approved</option><option value="3">Historical</option></select></label>
+      <label>Alphabet representative<select class="rb-sel" id="rfRep"><option value="1">SVP+</option><option value="2">Country head / VP</option><option value="3" selected>Sr. Director or below</option></select></label>
+    </div>
+    <div class="rft-out">
+      <div class="rft-tier" id="rfTier"></div>
+      <div>
+        <div class="rft-steps" id="rfSteps"></div>
+        <div class="rft-sum" id="rfSum"></div>
+        <div class="rft-sla">Highest tier across all three criteria wins. Standard SLA: 2 weeks minimum; leadership approvals collected weekly.</div>
+      </div>
+    </div>
+    <div style="padding:0 18px 18px"><table class="rft-tbl" id="rfTbl"></table></div>
+  </div>
+</div>
+
     </div></div></div>
 </div></div></section>
 
